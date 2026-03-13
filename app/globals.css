@@ -8,8 +8,7 @@
 }
 
 html, body {
-  /* 移除移动端适配，强制指定桌面端最小宽度，避免小屏幕下错乱 */
-  min-width: 1280px;
+  /* 恢复响应式，取消强制最小宽度的错误限制，让它能在各种屏幕自适应 */
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 

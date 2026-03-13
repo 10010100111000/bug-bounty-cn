@@ -24,15 +24,15 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div className="w-full relative overflow-hidden">
+    <div className="w-full relative overflow-x-hidden">
 
       {/* ========== 1. 英雄区 (Hero Section) ========== */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 flex items-center justify-center">
+      <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 flex flex-col items-center justify-center min-h-[90vh]">
         {/* 背景光效网格 */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
           {/* 左侧文字区 */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
@@ -41,26 +41,26 @@ export default function HomePage() {
               全新升级的 Bug Bounty 实战指南
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
               <span className="text-slate-100">从零到专业的</span><br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400 drop-shadow-[0_0_30px_rgba(34,211,238,0.4)]">
                 漏洞赏金猎人
               </span>
             </h1>
 
-            <p className="text-slate-400 text-xl mb-12 max-w-2xl leading-relaxed font-light">
+            <p className="text-slate-400 text-lg lg:text-xl mb-12 max-w-2xl leading-relaxed font-light">
               专为中文学习者打造的 Bug Bounty 全栈技术平台。深入解析核心漏洞原理，提供专业的实战挖掘方法论，带你拿下第一笔丰厚赏金。
             </p>
 
-            <div className="flex flex-wrap gap-6">
-              <Link href="/roadmap" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-slate-950 bg-cyan-400 rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]">
+            <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+              <Link href="/roadmap" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-slate-950 bg-cyan-400 rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] w-full sm:w-auto">
                 <span className="relative z-10 flex items-center">
                   开启学习之旅 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </Link>
 
-              <Link href="/vulnerabilities" className="inline-flex items-center justify-center px-8 py-4 font-bold text-slate-300 border border-slate-700 rounded-full bg-slate-900/50 backdrop-blur-md hover:text-white hover:border-violet-500/50 hover:bg-violet-900/20 transition-all shadow-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+              <Link href="/vulnerabilities" className="inline-flex items-center justify-center px-8 py-4 font-bold text-slate-300 border border-slate-700 rounded-full bg-slate-900/50 backdrop-blur-md hover:text-white hover:border-violet-500/50 hover:bg-violet-900/20 transition-all shadow-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] w-full sm:w-auto">
                 浏览漏洞图鉴
               </Link>
             </div>
@@ -80,11 +80,11 @@ export default function HomePage() {
           </div>
 
           {/* 右侧终端代码区 */}
-          <div className="w-full lg:w-1/2 relative perspective-1000">
+          <div className="w-full lg:w-1/2 relative mt-16 lg:mt-0 perspective-1000">
             {/* 发光底层托盘 */}
             <div className="absolute -inset-1 bg-gradient-to-br from-violet-600 to-cyan-600 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
 
-            <div className="tech-code-block w-full shadow-2xl transform rotate-y-[-5deg] rotate-x-[5deg] transition-transform duration-500 hover:rotate-0">
+            <div className="tech-code-block w-full shadow-2xl lg:transform lg:rotate-y-[-5deg] lg:rotate-x-[5deg] transition-transform duration-500 hover:rotate-0">
               {/* 终端栏 */}
               <div className="tech-code-header flex justify-between">
                 <div className="flex gap-2">
@@ -96,7 +96,7 @@ export default function HomePage() {
               </div>
 
               {/* 终端内容 */}
-              <div className="p-6 text-sm lg:text-base leading-relaxed h-[320px] flex flex-col justify-center">
+              <div className="p-6 text-sm lg:text-base leading-relaxed h-[320px] flex flex-col justify-center overflow-y-auto">
                 <div className="mb-2">
                   <span className="text-violet-400 font-bold">$</span> <span className="text-slate-300">subfinder -d target.com -all | httpx -sc -title</span>
                 </div>
@@ -128,10 +128,10 @@ export default function HomePage() {
       </section>
 
       {/* ========== 2. 核心知识库 (Feature Grid) ========== */}
-      <section className="py-32 relative z-10">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="mb-20">
-             <h2 className="text-4xl font-bold mb-4">掌握渗透测试<span className="text-gradient-primary">全景技能</span></h2>
+      <section className="py-24 lg:py-32 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="mb-16 lg:mb-20">
+             <h2 className="text-3xl lg:text-4xl font-bold mb-4">掌握渗透测试<span className="text-gradient-primary">全景技能</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mb-6"></div>
              <p className="text-slate-400 text-lg max-w-2xl">体系化梳理Bug Bounty核心流程，从被动侦察到漏洞利用，填补你所有的技术盲区。</p>
           </div>
@@ -160,20 +160,20 @@ export default function HomePage() {
       </section>
 
       {/* ========== 3. 高危漏洞速览 (Vulnerabilities Preview) ========== */}
-      <section className="py-32 bg-slate-900/40 border-y border-slate-800/50 backdrop-blur-md relative z-10">
-        <div className="max-w-7xl mx-auto px-8">
-           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+      <section className="py-24 lg:py-32 bg-slate-900/40 border-y border-slate-800/50 backdrop-blur-md relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-6">
               <div>
-                <h2 className="text-4xl font-bold mb-4">核心漏洞 <span className="text-gradient-primary">重点突破</span></h2>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4">核心漏洞 <span className="text-gradient-primary">重点突破</span></h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mb-6"></div>
                 <p className="text-slate-400 text-lg">锁定赏金收益最高、最易出现的高危安全问题</p>
               </div>
-              <Link href="/vulnerabilities" className="btn-tech-secondary whitespace-nowrap">
+              <Link href="/vulnerabilities" className="btn-tech-secondary whitespace-nowrap mt-4 lg:mt-0">
                 浏览完整漏洞图鉴
               </Link>
            </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { name: "Server-Side Request Forgery", abbr: "SSRF", level: "high", desc: "服务端请求伪造，云环境中的顶级杀手。" },
                 { name: "Insecure Direct Object Reference", abbr: "IDOR", level: "high", desc: "越权访问，业务逻辑漏洞中最易获利的金矿。" },
@@ -189,7 +189,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-slate-300 mb-3">{item.name}</h3>
                     <p className="text-sm text-slate-500 leading-relaxed mb-6">{item.desc}</p>
                   </div>
-                  <div className="mt-auto flex items-center text-cyan-500 text-sm font-bold group cursor-pointer hover:text-cyan-300">
+                  <div className="mt-auto flex items-center text-cyan-500 text-sm font-bold group cursor-pointer hover:text-cyan-300 pt-4">
                     查看详情 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -199,10 +199,10 @@ export default function HomePage() {
       </section>
 
       {/* ========== 4. 起步路径 (4-Step Guide - TimeLine Style) ========== */}
-      <section className="py-32 relative z-10">
-        <div className="max-w-5xl mx-auto px-8">
-          <div className="text-center mb-20">
-             <h2 className="text-4xl font-bold mb-4">猎人养成 <span className="text-gradient-primary">四步走</span></h2>
+      <section className="py-24 lg:py-32 relative z-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16 lg:mb-20">
+             <h2 className="text-3xl lg:text-4xl font-bold mb-4">猎人养成 <span className="text-gradient-primary">四步走</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mx-auto mb-6"></div>
              <p className="text-slate-400 text-lg">清晰的路线图，告别迷茫，拒绝从入门到放弃</p>
           </div>
@@ -244,17 +244,17 @@ export default function HomePage() {
               <div key={i} className={`relative flex flex-col md:flex-row items-center mb-16 ${item.side === 'right' ? 'md:flex-row-reverse' : ''}`}>
 
                 {/* 时间轴节点球 */}
-                <div className="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 rounded-full bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.8)] border-4 border-slate-950 z-10"></div>
+                <div className="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 rounded-full bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.8)] border-4 border-slate-950 z-10 mt-6 md:mt-0"></div>
 
                 {/* 内容卡片 */}
                 <div className="w-full md:w-[45%] pl-8 md:pl-0">
-                   <div className="glass-panel p-8 border-l-4 border-l-cyan-500 hover:border-l-violet-500 transition-colors">
-                      <div className="flex items-baseline gap-4 mb-4">
-                        <span className="text-4xl font-black text-slate-800 drop-shadow-sm">{item.step}</span>
+                   <div className="glass-panel p-6 lg:p-8 border-l-4 border-l-cyan-500 hover:border-l-violet-500 transition-colors">
+                      <div className="flex flex-wrap items-baseline gap-2 lg:gap-4 mb-4">
+                        <span className="text-3xl lg:text-4xl font-black text-slate-800 drop-shadow-sm">{item.step}</span>
                         <span className="text-xs font-bold uppercase tracking-wider text-violet-400">{item.duration}</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-slate-200 mb-4">{item.title}</h3>
-                      <p className="text-slate-400 leading-relaxed">{item.content}</p>
+                      <h3 className="text-xl lg:text-2xl font-bold text-slate-200 mb-4">{item.title}</h3>
+                      <p className="text-slate-400 leading-relaxed text-sm lg:text-base">{item.content}</p>
                    </div>
                 </div>
               </div>
@@ -270,20 +270,20 @@ export default function HomePage() {
       </section>
 
       {/* ========== 5. 行业数据与期望 ========== */}
-      <section className="py-24 bg-slate-950 border-y border-slate-800/80 relative z-10">
-        <div className="max-w-7xl mx-auto px-8">
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x divide-slate-800/50">
+      <section className="py-20 lg:py-24 bg-slate-950 border-y border-slate-800/80 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 md:divide-x divide-slate-800/50">
               {[
                 { number: "$100k+", label: "头部猎人年收入" },
                 { number: "25%", label: "逻辑漏洞占比" },
                 { number: "800+", label: "全球活跃 BBP 项目" },
                 { number: "$500", label: "新手首单平均赏金" }
               ].map((item, i) => (
-                <div key={i} className="text-center px-4">
-                  <div className="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 mb-3 drop-shadow-lg">
+                <div key={i} className="text-center px-2 lg:px-4">
+                  <div className="text-3xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 mb-3 drop-shadow-lg">
                     {item.number}
                   </div>
-                  <div className="text-slate-400 text-sm font-semibold tracking-wider uppercase">{item.label}</div>
+                  <div className="text-slate-400 text-xs lg:text-sm font-semibold tracking-wider uppercase">{item.label}</div>
                 </div>
               ))}
            </div>
@@ -291,10 +291,10 @@ export default function HomePage() {
       </section>
 
       {/* ========== 6. FAQ (科技感手风琴式布局) ========== */}
-      <section className="py-32 relative z-10">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="py-24 lg:py-32 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-             <h2 className="text-4xl font-bold mb-4">常见问题 <span className="text-gradient-primary">解答</span></h2>
+             <h2 className="text-3xl lg:text-4xl font-bold mb-4">常见问题 <span className="text-gradient-primary">解答</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mx-auto mb-6"></div>
           </div>
 
@@ -313,11 +313,11 @@ export default function HomePage() {
                 a: "IDOR (越权访问) 和 业务逻辑漏洞。这类漏洞扫描器极难发现，完全依赖人工测试和对业务流的理解，竞争相对较小，且危害往往极高（高赏金）。"
               }
             ].map((item, i) => (
-              <div key={i} className="glass-panel p-8">
-                <h3 className="text-xl font-bold text-slate-200 mb-4 flex items-start">
+              <div key={i} className="glass-panel p-6 lg:p-8">
+                <h3 className="text-lg lg:text-xl font-bold text-slate-200 mb-4 flex items-start">
                   <span className="text-cyan-500 mr-3 mt-1">Q.</span> {item.q}
                 </h3>
-                <p className="text-slate-400 leading-relaxed text-lg pl-8">
+                <p className="text-slate-400 leading-relaxed text-base lg:text-lg pl-8 lg:pl-8">
                   {item.a}
                 </p>
               </div>
@@ -327,20 +327,20 @@ export default function HomePage() {
       </section>
 
       {/* ========== 7. 底部 CTA ========== */}
-      <section className="py-32 relative z-10 text-center overflow-hidden">
+      <section className="py-24 lg:py-32 relative z-10 text-center overflow-hidden">
          {/* 背景强光 */}
-         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-         <div className="max-w-3xl mx-auto px-8 relative z-10">
-            <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tight">
+         <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tight">
                准备好获取你的<br/>
                <span className="text-gradient-primary">第一笔赏金</span> 了吗？
             </h2>
-            <p className="text-xl text-slate-400 mb-12 font-light">
+            <p className="text-lg lg:text-xl text-slate-400 mb-12 font-light">
                不要停留在纸上谈兵，点击下方按钮，开始你真正的黑客实战旅程。
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-               <Link href="/roadmap" className="btn-tech-primary text-lg px-10 py-5">
+               <Link href="/roadmap" className="btn-tech-primary text-base lg:text-lg px-8 py-4 lg:px-10 lg:py-5">
                  立刻开始学习
                </Link>
             </div>
