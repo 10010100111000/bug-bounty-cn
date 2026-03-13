@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /* -------------------------- 1. 全局重置和基础样式 -------------------------- */
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -20,6 +20,10 @@ html, body {
   letter-spacing: 0.025em; /* 微调字间距 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
 }
 
 /* -------------------------- 2. 现代科技核心类 (极简 & 性能优先) -------------------------- */
@@ -113,6 +117,20 @@ html, body {
   background: rgba(34, 211, 238, 0.1);
   border-color: #22d3ee;
   box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+/* 导航辅助类 */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to right, transparent 0, black 16px, black calc(100% - 16px), transparent 100%);
 }
 
 
