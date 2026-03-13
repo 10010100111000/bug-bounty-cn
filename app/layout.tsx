@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <body className="bg-[#fafafa] min-h-screen">
+      <body className="min-h-screen">
         {/* 全局导航栏 */}
         <Navbar />
 
@@ -25,8 +25,8 @@ export default function RootLayout({
         </main>
 
         {/* 全局页脚（保留你原来的） */}
-        <footer className="bg-white border-t border-[#e5e5e5] py-8 mt-20">
-          <div className="max-w-7xl mx-auto px-4 text-center text-[#666] text-sm">
+        <footer className="bg-white/10 backdrop-blur-xl border-t border-white/20 py-8 mt-20">
+          <div className="max-w-7xl mx-auto px-4 text-center text-slate-300 text-sm">
             Bug Bounty中文社区 © 2024 | 仅供学习交流，严禁用于非法用途
           </div>
         </footer>
