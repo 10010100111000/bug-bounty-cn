@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <body className="min-h-screen text-slate-50 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-screen overflow-x-hidden w-full text-slate-50 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
 
         {/* 背景光效 (纯CSS性能友好) */}
         <div className="fixed top-[-50%] left-[-20%] w-[120vw] h-[120vh] rounded-[100%] bg-violet-900/10 blur-[150px] -z-10 pointer-events-none"></div>
@@ -30,7 +30,7 @@ export default function RootLayout({
 
         {/* 科技感页脚 */}
         <footer className="mt-32 border-t border-slate-800 bg-slate-950/80 backdrop-blur-xl">
-          <div className="max-w-7xl mx-auto px-8 py-12">
+          <div className="w-full max-w-[1280px] mx-auto px-8 py-12">
             <div className="flex justify-between items-center border-b border-slate-800 pb-8 mb-8">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-white font-bold font-mono">

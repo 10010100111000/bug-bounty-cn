@@ -32,7 +32,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
         <div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
           {/* 左侧文字区 */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
@@ -129,7 +129,7 @@ export default function HomePage() {
 
       {/* ========== 2. 核心知识库 (Feature Grid) ========== */}
       <section className="py-24 lg:py-32 relative z-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
           <div className="mb-16 lg:mb-20">
              <h2 className="text-3xl lg:text-4xl font-bold mb-4">掌握渗透测试<span className="text-gradient-primary">全景技能</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mb-6"></div>
@@ -161,7 +161,7 @@ export default function HomePage() {
 
       {/* ========== 3. 高危漏洞速览 (Vulnerabilities Preview) ========== */}
       <section className="py-24 lg:py-32 bg-slate-900/40 border-y border-slate-800/50 backdrop-blur-md relative z-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-6">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold mb-4">核心漏洞 <span className="text-gradient-primary">重点突破</span></h2>
@@ -200,7 +200,7 @@ export default function HomePage() {
 
       {/* ========== 4. 起步路径 (4-Step Guide - TimeLine Style) ========== */}
       <section className="py-24 lg:py-32 relative z-10">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[1024px] mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-20">
              <h2 className="text-3xl lg:text-4xl font-bold mb-4">猎人养成 <span className="text-gradient-primary">四步走</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mx-auto mb-6"></div>
@@ -271,7 +271,7 @@ export default function HomePage() {
 
       {/* ========== 5. 行业数据与期望 ========== */}
       <section className="py-20 lg:py-24 bg-slate-950 border-y border-slate-800/80 relative z-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 md:divide-x divide-slate-800/50">
               {[
                 { number: "$100k+", label: "头部猎人年收入" },
@@ -292,7 +292,7 @@ export default function HomePage() {
 
       {/* ========== 6. FAQ (科技感手风琴式布局) ========== */}
       <section className="py-24 lg:py-32 relative z-10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[896px] mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center mb-16">
              <h2 className="text-3xl lg:text-4xl font-bold mb-4">常见问题 <span className="text-gradient-primary">解答</span></h2>
              <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full mx-auto mb-6"></div>
@@ -331,7 +331,7 @@ export default function HomePage() {
          {/* 背景强光 */}
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-         <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
+         <div className="w-full max-w-[768px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tight">
                准备好获取你的<br/>
                <span className="text-gradient-primary">第一笔赏金</span> 了吗？
