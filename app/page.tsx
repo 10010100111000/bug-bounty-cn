@@ -32,7 +32,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
         <div className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px] pointer-events-none"></div>
 
-        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+        <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
           {/* 左侧文字区 */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
@@ -250,7 +250,7 @@ export default function HomePage() {
                 <div className="w-full md:w-[45%] pl-8 md:pl-0">
                    <div className="glass-panel p-6 lg:p-8 border-l-4 border-l-cyan-500 hover:border-l-violet-500 transition-colors">
                       <div className="flex flex-wrap items-baseline gap-2 lg:gap-4 mb-4">
-                        <span className="text-3xl lg:text-4xl font-black text-slate-800 drop-shadow-sm">{item.step}</span>
+                        <span className="text-3xl lg:text-4xl font-black text-cyan-300 drop-shadow-sm">{item.step}</span>
                         <span className="text-xs font-bold uppercase tracking-wider text-violet-400">{item.duration}</span>
                       </div>
                       <h3 className="text-xl lg:text-2xl font-bold text-slate-200 mb-4">{item.title}</h3>
