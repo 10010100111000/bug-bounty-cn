@@ -61,26 +61,26 @@ export default function APIKeysGuide() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">推荐API密钥</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           这些密钥能大幅提升信息收集工具的结果——大多数都有免费额度，差异非常大。
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-4">
         {apiKeys.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-4">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-4">
             <div className="flex items-center justify-between mb-2">
               <h4 className="font-bold">{item.name}</h4>
               <span className="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-medium">
                 免费
               </span>
             </div>
-            <p className="text-sm text-[#666] mb-3">{item.desc}</p>
+            <p className="text-sm text-slate-400 mb-3">{item.desc}</p>
             <a
               href={`https://${item.site}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#5a7a00] font-medium hover:underline"
+              className="text-sm text-cyan-300 font-medium hover:underline"
             >
               {item.site}
             </a>

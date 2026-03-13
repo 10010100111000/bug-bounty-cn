@@ -72,45 +72,45 @@ echo "[*] Add ~/go/bin to your PATH if not already done"`;
 
       <div className="space-y-6">
         {/* 系统要求 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4">系统要求</h4>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-3 rounded-lg bg-[#fafafa] border border-[#f0f0f0]">
+            <div className="p-3 rounded-lg bg-slate-900/20 border border-[#f0f0f0]">
               <h5 className="font-bold mb-1">操作系统</h5>
-              <p className="text-sm text-[#666]">Ubuntu/Kali Linux（或Windows上的WSL2）</p>
+              <p className="text-sm text-slate-400">Ubuntu/Kali Linux（或Windows上的WSL2）</p>
             </div>
-            <div className="p-3 rounded-lg bg-[#fafafa] border border-[#f0f0f0]">
+            <div className="p-3 rounded-lg bg-slate-900/20 border border-[#f0f0f0]">
               <h5 className="font-bold mb-1">基础依赖</h5>
-              <p className="text-sm text-[#666]">Go 1.21+, Python 3.10+, Git, pip3</p>
+              <p className="text-sm text-slate-400">Go 1.21+, Python 3.10+, Git, pip3</p>
             </div>
-            <div className="p-3 rounded-lg bg-[#fafafa] border border-[#f0f0f0]">
+            <div className="p-3 rounded-lg bg-slate-900/20 border border-[#f0f0f0]">
               <h5 className="font-bold mb-1">硬件要求</h5>
-              <p className="text-sm text-[#666]">最低4GB RAM、SSD、高速网络连接</p>
+              <p className="text-sm text-slate-400">最低4GB RAM、SSD、高速网络连接</p>
             </div>
-            <div className="p-3 rounded-lg bg-[#fafafa] border border-[#f0f0f0]">
+            <div className="p-3 rounded-lg bg-slate-900/20 border border-[#f0f0f0]">
               <h5 className="font-bold mb-1">推荐环境</h5>
-              <p className="text-sm text-[#666]">Linux VPS + 本地Burp Suite环境</p>
+              <p className="text-sm text-slate-400">Linux VPS + 本地Burp Suite环境</p>
             </div>
           </div>
         </div>
 
         {/* 快速安装脚本 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4">一键安装脚本</h4>
-          <p className="text-[#666] mb-4">使用这个脚本一键安装所有核心工具，适合新手快速搭建环境。</p>
+          <p className="text-slate-400 mb-4">使用这个脚本一键安装所有核心工具，适合新手快速搭建环境。</p>
           <div className="bg-[#1a1a1a] rounded-lg p-4 overflow-x-auto">
-            <pre className="text-[#9FEF00] text-sm whitespace-pre-wrap break-all">
+            <pre className="text-cyan-400 text-sm whitespace-pre-wrap break-all">
               {installScript}
             </pre>
           </div>
         </div>
 
         {/* 推荐文件夹结构 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4">推荐文件夹结构</h4>
-          <p className="text-[#666] mb-4">清晰的文件夹结构能帮你整理结果，避免丢失重要信息。</p>
-          <div className="bg-[#fafafa] rounded-lg p-4 overflow-x-auto border border-[#e5e5e5]">
-            <pre className="text-sm text-[#666] whitespace-pre">
+          <p className="text-slate-400 mb-4">清晰的文件夹结构能帮你整理结果，避免丢失重要信息。</p>
+          <div className="bg-slate-900/20 rounded-lg p-4 overflow-x-auto border border-slate-700/50">
+            <pre className="text-sm text-slate-400 whitespace-pre">
               {folderStructure}
             </pre>
           </div>

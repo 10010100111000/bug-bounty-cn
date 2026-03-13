@@ -49,23 +49,23 @@ export default function ReportStructure() {
 function ReportFullStructure() {
   return (
     <div className="space-y-6">
-      <p className="text-[#666] leading-relaxed">
+      <p className="text-slate-400 leading-relaxed">
         每一份被接受、拿到高赏金的专业报告，都遵循这个标准6段式结构。清晰的结构是报告通过审核的基础。
       </p>
 
       {/* 1. 标题 */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">1. 标题 (Title)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           清晰、具体的标题，必须包含「漏洞等级」+「漏洞类型」+「漏洞位置」，让审核人员一眼就能理解漏洞核心。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-3 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             标准标题示例
           </h5>
-          <ul className="space-y-2 text-[#666]">
+          <ul className="space-y-2 text-slate-400">
             <li className="leading-relaxed">• [高危] 用户个人资料页的Markdown渲染处存在存储型XSS漏洞</li>
             <li className="leading-relaxed">• [严重] IDOR漏洞：通过 /api/photos/{'{id}'} 可访问任意用户的私密照片</li>
             <li className="leading-relaxed">• [中危] 邮箱修改功能存在CSRF漏洞，可导致账号劫持</li>
@@ -84,12 +84,12 @@ function ReportFullStructure() {
           </ul>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <p className="text-[#5a7a00] leading-relaxed">
+          <p className="text-cyan-300 leading-relaxed">
             让标题清晰描述漏洞，审核人员只看标题就能理解漏洞的类型、位置和严重程度，不要模糊化描述。
           </p>
         </div>
@@ -98,26 +98,26 @@ function ReportFullStructure() {
       {/* 2. 漏洞摘要 */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">2. 漏洞摘要 (Summary)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           用2-4句话简洁描述漏洞的核心，只说明「漏洞是什么、在哪里」，不要在这里展开影响和复现步骤。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-2 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             示例
           </h5>
-          <p className="text-[#666] leading-relaxed">
+          <p className="text-slate-400 leading-relaxed">
             在用户个人资料页存在存储型XSS漏洞。当用户在昵称中插入JavaScript代码时，代码会在所有访问该用户资料页的访客浏览器中执行，无需用户交互。
           </p>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <p className="text-[#5a7a00] leading-relaxed">
+          <p className="text-cyan-300 leading-relaxed">
             清晰比长度更重要，不要堆砌细节，只讲核心的漏洞逻辑。
           </p>
         </div>
@@ -126,16 +126,16 @@ function ReportFullStructure() {
       {/* 3. 复现步骤 */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">3. 复现步骤 (Steps to Reproduce)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           用编号的、一步一步的详细步骤，描述如何复现漏洞。必须足够详细，让审核人员不需要额外询问你，就能完整复现漏洞。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-3 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             标准复现步骤示例
           </h5>
-          <ol className="list-decimal list-inside space-y-2 text-[#666]">
+          <ol className="list-decimal list-inside space-y-2 text-slate-400">
             <li className="leading-relaxed">使用攻击者账号A，访问 https://target.com/login 登录系统</li>
             <li className="leading-relaxed">进入「设置 {'>'} 个人资料」页面</li>
             <li className="leading-relaxed">在「昵称」输入框中填入Payload：
@@ -150,12 +150,12 @@ function ReportFullStructure() {
           </ol>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <ul className="space-y-1 text-[#5a7a00] leading-relaxed">
+          <ul className="space-y-1 text-cyan-300 leading-relaxed">
             <li>• 假设审核人员完全不了解这个应用，不要省略关键步骤</li>
             <li>• 每个步骤只做一件事，逻辑清晰</li>
             <li>• 明确说明需要的账号、环境、前置条件</li>
@@ -166,16 +166,16 @@ function ReportFullStructure() {
       {/* 4. 漏洞危害 */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">4. 漏洞危害 (Impact)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           详细说明漏洞被利用后，会造成什么实际危害，重点讲「对业务和用户的影响」，而不是只讲技术概念。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-2 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             示例
           </h5>
-          <p className="text-[#666] leading-relaxed">
+          <p className="text-slate-400 leading-relaxed">
             攻击者可以通过该漏洞窃取任意访问其资料页的用户的会话Cookie，进而完全接管用户账号。由于用户个人资料是公开可见的，该漏洞可以被大规模利用，影响成千上万的用户，造成严重的用户数据泄露和账号安全问题。
           </p>
         </div>
@@ -192,12 +192,12 @@ function ReportFullStructure() {
           </ul>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <p className="text-[#5a7a00] leading-relaxed">
+          <p className="text-cyan-300 leading-relaxed">
             不要夸大危害，也不要低估危害。要说明「谁能利用、利用后能做什么、影响多少人、对业务有什么损害」，而不是只讲技术术语。
           </p>
         </div>
@@ -206,16 +206,16 @@ function ReportFullStructure() {
       {/* 5. 漏洞证明（修复显示不全的核心部分） */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">5. 漏洞证明 (Proof of Concept / PoC)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           用截图、视频、完整的HTTP请求/响应包，证明漏洞真实存在。这是报告的核心，没有有效的PoC，报告几乎一定会被拒绝。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-3 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             合格的PoC包含
           </h5>
-          <ul className="space-y-3 text-[#666]">
+          <ul className="space-y-3 text-slate-400">
             <li className="leading-relaxed">• 复现每一步的关键截图</li>
             <li className="leading-relaxed">• 完整的漏洞利用演示视频（比截图更有说服力）</li>
             <li className="leading-relaxed">• Burp Suite中完整的HTTP请求/响应包</li>
@@ -223,12 +223,12 @@ function ReportFullStructure() {
           </ul>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <ul className="space-y-1 text-[#5a7a00] leading-relaxed">
+          <ul className="space-y-1 text-cyan-300 leading-relaxed">
             <li>• 视频比截图更有力，推荐用Loom、OBS录制简短的演示视频</li>
             <li>• 截图要清晰，关键信息要高亮，不要只截局部</li>
             <li>• 复杂的漏洞一定要配视频，降低审核人员的复现成本</li>
@@ -239,28 +239,28 @@ function ReportFullStructure() {
       {/* 6. 修复建议 */}
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="text-lg font-bold mb-3">6. 修复建议 (Remediation)</h4>
-        <p className="text-[#666] leading-relaxed mb-4">
+        <p className="text-slate-400 leading-relaxed mb-4">
           给出具体的技术修复建议，说明如何从根本上修复这个漏洞。这部分是可选的，但会极大提升你的报告专业度，给厂商留下好印象。
         </p>
         
-        <div className="bg-[#fafafa] rounded-lg p-4 mb-4">
+        <div className="bg-slate-900/20 rounded-lg p-4 mb-4">
           <h5 className="font-bold mb-3 flex items-center gap-2">
             <span className="text-green-600">✅</span>
             修复建议示例（XSS场景）
           </h5>
-          <ul className="space-y-2 text-[#666]">
+          <ul className="space-y-2 text-slate-400">
             <li className="leading-relaxed">• 在渲染用户输入内容前，使用DOMPurify等成熟的库对用户输入进行HTML净化</li>
             <li className="leading-relaxed">• 对输出到HTML中的特殊字符进行实体编码</li>
             <li className="leading-relaxed">• 配置合理的Content Security Policy (CSP) 响应头，限制未授权脚本的执行</li>
           </ul>
         </div>
 
-        <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-          <h5 className="font-bold mb-2 flex items-center gap-2 text-[#5a7a00]">
+        <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+          <h5 className="font-bold mb-2 flex items-center gap-2 text-cyan-300">
             <span>💡</span>
             核心建议
           </h5>
-          <p className="text-[#5a7a00] leading-relaxed">
+          <p className="text-cyan-300 leading-relaxed">
             不要只说「过滤用户输入」这种空泛的建议，要给出具体的、可落地的技术方案，甚至可以给出代码示例，体现你的专业性。
           </p>
         </div>
@@ -316,13 +316,13 @@ function CommonMistakes() {
 
   return (
     <div className="space-y-4">
-      <p className="text-[#666] mb-4">
+      <p className="text-slate-400 mb-4">
         这些是导致报告被拒绝、拿不到赏金的最常见错误，一定要在提交报告前逐一检查，避免踩坑。
       </p>
       {mistakes.map((item, idx) => (
-        <div key={idx} className="bg-white border border-[#e5e5e5] rounded-lg p-4">
+        <div key={idx} className="bg-slate-900/40 backdrop-blur-md border border-slate-700/50 rounded-lg p-4">
           <h4 className="font-bold mb-2">{item.title}</h4>
-          <p className="text-sm text-[#666] leading-relaxed">{item.desc}</p>
+          <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
         </div>
       ))}
     </div>
@@ -391,25 +391,25 @@ function RejectionReasons() {
 
   return (
     <div className="space-y-6">
-      <p className="text-[#666] mb-4">
+      <p className="text-slate-400 mb-4">
         这5个原因，占了漏洞报告被拒绝的95%以上。提交报告前，一定要对照检查，避免踩坑。
       </p>
       {reasons.map((item, idx) => (
-        <div key={idx} className="bg-white border border-[#e5e5e5] rounded-lg p-5">
+        <div key={idx} className="bg-slate-900/40 backdrop-blur-md border border-slate-700/50 rounded-lg p-5">
           <h4 className="font-bold mb-3 text-lg">{item.title}</h4>
-          <p className="text-[#666] mb-3 leading-relaxed">{item.desc}</p>
+          <p className="text-slate-400 mb-3 leading-relaxed">{item.desc}</p>
           
-          <div className="bg-[#fafafa] rounded-lg p-4 mb-3">
+          <div className="bg-slate-900/20 rounded-lg p-4 mb-3">
             <h5 className="font-bold mb-2 text-sm">常见场景</h5>
-            <ul className="space-y-1 text-sm text-[#666]">
+            <ul className="space-y-1 text-sm text-slate-400">
               {item.examples.map((ex, i) => (
                 <li key={i} className="leading-relaxed">• {ex}</li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-[#9FEF00]/10 rounded-lg p-4">
-            <p className="text-sm text-[#5a7a00] leading-relaxed">
+          <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
+            <p className="text-sm text-cyan-300 leading-relaxed">
               <strong>避坑方法：</strong> {item.tip}
             </p>
           </div>
@@ -424,115 +424,115 @@ function DoDontRules() {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       {/* 要做的事 */}
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+      <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
         <h3 className="text-lg font-bold text-green-700 mb-4 flex items-center gap-2">
           ✅ 一定要做
         </h3>
         <ul className="space-y-3">
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">测试前完整阅读厂商的漏洞赏金规则，明确测试范围和边界</span>
+            <span className="text-slate-400 text-sm leading-relaxed">测试前完整阅读厂商的漏洞赏金规则，明确测试范围和边界</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">把复现步骤写得足够详细，每一步都截图记录</span>
+            <span className="text-slate-400 text-sm leading-relaxed">把复现步骤写得足够详细，每一步都截图记录</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">只使用你自己的测试账号，不要测试真实用户的数据</span>
+            <span className="text-slate-400 text-sm leading-relaxed">只使用你自己的测试账号，不要测试真实用户的数据</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">如果发现了真实的敏感数据，立即停止测试并通知厂商</span>
+            <span className="text-slate-400 text-sm leading-relaxed">如果发现了真实的敏感数据，立即停止测试并通知厂商</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">保存好你提交的每一份报告，做好记录</span>
+            <span className="text-slate-400 text-sm leading-relaxed">保存好你提交的每一份报告，做好记录</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">优先使用厂商提供的测试环境进行测试</span>
+            <span className="text-slate-400 text-sm leading-relaxed">优先使用厂商提供的测试环境进行测试</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">准确计算CVSS评分，合理评估漏洞严重等级</span>
+            <span className="text-slate-400 text-sm leading-relaxed">准确计算CVSS评分，合理评估漏洞严重等级</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">尽可能附上漏洞演示视频，大幅提高审核通过率</span>
+            <span className="text-slate-400 text-sm leading-relaxed">尽可能附上漏洞演示视频，大幅提高审核通过率</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">和厂商沟通时，保持专业、耐心、礼貌的态度</span>
+            <span className="text-slate-400 text-sm leading-relaxed">和厂商沟通时，保持专业、耐心、礼貌的态度</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">从被拒绝的报告里学习，总结经验教训</span>
+            <span className="text-slate-400 text-sm leading-relaxed">从被拒绝的报告里学习，总结经验教训</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">使用专门的邮箱来做Bug Bounty，管理好各个平台的账号</span>
+            <span className="text-slate-400 text-sm leading-relaxed">使用专门的邮箱来做Bug Bounty，管理好各个平台的账号</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">给每个测试的厂商建单独的笔记，记录规则、范围、发现的问题</span>
+            <span className="text-slate-400 text-sm leading-relaxed">给每个测试的厂商建单独的笔记，记录规则、范围、发现的问题</span>
           </li>
         </ul>
       </div>
 
       {/* 绝对不要做的事 */}
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+      <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
         <h3 className="text-lg font-bold text-red-700 mb-4 flex items-center gap-2">
           ❌ 绝对不要做
         </h3>
         <ul className="space-y-3">
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要测试真实用户的数据，更不要修改、删除、泄露用户数据</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要测试真实用户的数据，更不要修改、删除、泄露用户数据</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要做DoS/DDoS攻击，不要用自动化工具扫崩站点</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要做DoS/DDoS攻击，不要用自动化工具扫崩站点</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要超出厂商规定的测试范围，哪怕是边缘的目标</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要超出厂商规定的测试范围，哪怕是边缘的目标</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要夸大漏洞的危害和严重等级，实事求是</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要夸大漏洞的危害和严重等级，实事求是</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要在厂商修复前，公开泄露任何漏洞细节</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要在厂商修复前，公开泄露任何漏洞细节</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要用威胁、勒索的语气和厂商沟通，哪怕你的漏洞是对的</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要用威胁、勒索的语气和厂商沟通，哪怕你的漏洞是对的</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要重复提交同一个漏洞，也不要批量提交低质量的垃圾报告</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要重复提交同一个漏洞，也不要批量提交低质量的垃圾报告</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要直接复制粘贴其他研究者的报告，哪怕是同类型的漏洞</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要直接复制粘贴其他研究者的报告，哪怕是同类型的漏洞</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要用不理解的自动化工具盲目扫描，你要为自己发出的每一个请求负责</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要用不理解的自动化工具盲目扫描，你要为自己发出的每一个请求负责</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要只把扫描器的输出直接当报告提交，一定要自己验证和整理</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要只把扫描器的输出直接当报告提交，一定要自己验证和整理</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要通过平台外的渠道联系厂商，所有沟通都在官方平台内进行</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要通过平台外的渠道联系厂商，所有沟通都在官方平台内进行</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-600 font-bold mt-0.5">•</span>
-            <span className="text-[#666] text-sm leading-relaxed">不要索要特定金额的赏金，赏金的评估交给厂商和平台</span>
+            <span className="text-slate-400 text-sm leading-relaxed">不要索要特定金额的赏金，赏金的评估交给厂商和平台</span>
           </li>
         </ul>
       </div>
@@ -583,13 +583,13 @@ function AdvancedTips() {
 
   return (
     <div className="space-y-4">
-      <p className="text-[#666] mb-4">
+      <p className="text-slate-400 mb-4">
         这些技巧能让你的报告从「合格」变成「优秀」，大幅提高通过率和赏金金额，也能让厂商记住你的专业性。
       </p>
       {tips.map((item, idx) => (
-        <div key={idx} className="bg-white border border-[#e5e5e5] rounded-lg p-4">
+        <div key={idx} className="bg-slate-900/40 backdrop-blur-md border border-slate-700/50 rounded-lg p-4">
           <h4 className="font-bold mb-2">{item.title}</h4>
-          <p className="text-sm text-[#666] leading-relaxed">{item.desc}</p>
+          <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
         </div>
       ))}
     </div>

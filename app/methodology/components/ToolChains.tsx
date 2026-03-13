@@ -68,28 +68,28 @@ export default function ToolChains() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">推荐工具链</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           协同工作以获得最佳结果的工具组合。
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         {toolChains.map((chain, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <h4 className="text-lg font-bold mb-3">{chain.name}</h4>
             
             <div className="mb-4">
               <div className="flex flex-wrap gap-2">
                 {chain.tools.map((tool, i) => (
-                  <div key={i} className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                  <div key={i} className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                     <span className="font-bold">{tool.name}</span>
-                    <span className="text-[#666] ml-1">— {tool.desc}</span>
+                    <span className="text-slate-400 ml-1">— {tool.desc}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-[#9FEF00]/5 rounded-lg p-3 border border-[#9FEF00]/20">
+            <div className="bg-cyan-500/10 rounded-lg p-3 border border-cyan-500/30">
               <p className="text-sm font-mono">{chain.flow}</p>
             </div>
           </div>

@@ -32,17 +32,17 @@ import {
 
 export default function RoadmapPage() {
   return (
-    <div className="bg-[#fafafa]">
+    <div className="bg-slate-900/20">
       {/* ========== 1. 页面顶部标题区（和原网站头部对齐） ========== */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-4">
             你的漏洞赏金之路
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Bug Bounty 完整学习路线图
           </h1>
-          <p className="text-[#666] text-lg">
+          <p className="text-slate-400 text-lg">
             一套体系化、分阶段的12步学习路线，带你从零基础入门，成长为专业的漏洞赏金猎人
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">12个阶段，走向专业</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               这是一套完整且灵活的学习路线，你无需完全学完一个阶段再进入下一个，部分阶段可以并行推进
             </p>
           </div>
@@ -73,13 +73,13 @@ export default function RoadmapPage() {
               { phase: "阶段11", title: "社区贡献与分享", duration: "持续进行", level: "中级-高级" },
               { phase: "阶段12", title: "专业深耕与职业发展", duration: "持续进行", level: "专家" },
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-5">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-semibold text-[#666]">{item.phase}</span>
-                  <span className="text-xs font-medium bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">{item.level}</span>
+                  <span className="text-sm font-semibold text-slate-400">{item.phase}</span>
+                  <span className="text-xs font-medium bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">{item.level}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                <p className="text-sm text-[#666]">预计时长：{item.duration}</p>
+                <p className="text-sm text-slate-400">预计时长：{item.duration}</p>
               </div>
             ))}
           </div>
@@ -87,11 +87,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 3. 时间分配指南（原网站核心板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">学习与实战时间分配</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               建议的时间分配比例，帮你在测试和挖掘过程中，把精力放在最高效的环节
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function RoadmapPage() {
               <div key={index} className={`rounded-lg border ${item.color} p-5 text-center`}>
                 <div className="text-3xl font-bold mb-2">{item.percent}</div>
                 <h3 className="font-semibold mb-1">{item.title}</h3>
-                <p className="text-xs text-[#666]">{item.desc}</p>
+                <p className="text-xs text-slate-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -119,56 +119,56 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">分阶段详细学习指南</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               每个阶段的学习目标、核心内容、推荐资源、实践项目和预期成果
             </p>
           </div>
 
           <div className="space-y-12">
             {/* 阶段1 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段1</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段1</span>
                   <h3 className="text-xl md:text-2xl font-bold">技术基础</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：2-3个月 | 难度：入门</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：2-3个月 | 难度：入门</span>
                 </div>
-                <p className="text-[#666] mt-2">所有内容的核心基础，决定了你后续的上限</p>
+                <p className="text-slate-400 mt-2">所有内容的核心基础，决定了你后续的上限</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <BookOpen className="w-5 h-5 text-[#9FEF00]" />
+                      <BookOpen className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>网络基础：TCP/IP、HTTP/HTTPS、DNS、OSI七层模型、常见端口与服务</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Linux系统：命令行操作、文件系统、权限管理、Shell脚本基础</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>编程基础：Python/JavaScript基础，重点是脚本编写能力</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Web应用原理：客户端-服务端架构、HTML/CSS/JavaScript、DOM</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>数据库基础：SQL基础、NoSQL基础</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>加密基础：哈希、编码、加密的区别与原理</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>浏览器工作原理与开发者工具使用</span>
                       </li>
                     </ul>
@@ -176,7 +176,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -189,7 +189,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         推荐证书
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -200,7 +200,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -212,26 +212,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 使用Apache/Nginx搭建本地Web服务器</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 编写Python端口扫描脚本</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 搭建带登录功能的简单Web页面</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 配置并自定义Linux虚拟机环境</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将完全理解Web应用和网络的工作原理，这是发现漏洞的必备基础。</p>
                   </div>
                 </div>
@@ -239,61 +239,61 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段2 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段2</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段2</span>
                   <h3 className="text-xl md:text-2xl font-bold">Web安全基础</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：3-4个月 | 难度：入门-中级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：3-4个月 | 难度：入门-中级</span>
                 </div>
-                <p className="text-[#666] mt-2">学习最常见的Web漏洞，掌握核心原理和检测方法</p>
+                <p className="text-slate-400 mt-2">学习最常见的Web漏洞，掌握核心原理和检测方法</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-[#9FEF00]" />
+                      <Shield className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>OWASP Top 10 详细讲解与实战</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>XSS跨站脚本：反射型、存储型、DOM型</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>SQL注入：联合查询、盲注、时间盲注、报错注入</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>IDOR不安全的直接对象引用、越权访问</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>CSRF跨站请求伪造</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>SSRF服务端请求伪造</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>认证与授权漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>HTTP请求/响应深度解析：头、方法、状态码</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>会话管理与Cookie安全</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>基础的WAF/过滤器绕过技巧</span>
                       </li>
                     </ul>
@@ -301,7 +301,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -314,7 +314,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         推荐证书
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -325,7 +325,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -337,26 +337,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 完成PortSwigger Academy所有基础实验室</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 整理自己的漏洞速查表</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 搭建OWASP Juice Shop，发现至少20个漏洞</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 自己开发一个带有漏洞的Web应用，用于练习</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将理解最常见的漏洞类型，掌握它们的发现和利用方法，这是漏洞赏金的核心能力。</p>
                   </div>
                 </div>
@@ -364,61 +364,61 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段3 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段3</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段3</span>
                   <h3 className="text-xl md:text-2xl font-bold">核心测试工具</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：2-3个月 | 难度：中级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：2-3个月 | 难度：中级</span>
                 </div>
-                <p className="text-[#666] mt-2">精通专业赏金猎人日常使用的核心工具，提升测试效率</p>
+                <p className="text-slate-400 mt-2">精通专业赏金猎人日常使用的核心工具，提升测试效率</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Wrench className="w-5 h-5 text-[#9FEF00]" />
+                      <Wrench className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Burp Suite 社区版/专业版：代理、重放、爆破、扫描等核心模块</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>nmap：网络、端口、服务扫描，高级用法与脚本</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>ffuf/dirsearch：高速目录/文件/参数爆破</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Nuclei：基于模板的漏洞扫描，自定义模板编写</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>子域名枚举：subfinder、amass、findomain</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>httpx：HTTP服务存活探测、指纹识别</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>SQLmap：自动化SQL注入检测与利用</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>cURL/HTTPie：HTTP请求手动调试</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Git/GitHub：工具与代码管理</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Docker：快速搭建测试环境</span>
                       </li>
                     </ul>
@@ -426,7 +426,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -439,7 +439,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         推荐证书
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -449,7 +449,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -461,26 +461,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 搭建多工具联动的自动化信息收集流程</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 编写Bash脚本自动化信息收集流程</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 编写自定义Nuclei模板</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 配置Burp Suite，安装常用插件，自定义设置</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将精通专业赏金猎人的核心工具链，能够搭建高效的测试工作流，大幅提升漏洞挖掘效率。</p>
                   </div>
                 </div>
@@ -488,57 +488,57 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段4 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段4</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段4</span>
                   <h3 className="text-xl md:text-2xl font-bold">实战靶场训练</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：3-4个月 | 难度：中级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：3-4个月 | 难度：中级</span>
                 </div>
-                <p className="text-[#666] mt-2">在安全的靶场环境中反复练习，把理论转化为实战能力</p>
+                <p className="text-slate-400 mt-2">在安全的靶场环境中反复练习，把理论转化为实战能力</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Target className="w-5 h-5 text-[#9FEF00]" />
+                      <Target className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>完成PortSwigger Academy从入门到专家级的所有实验室</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>在TryHackMe和HackTheBox上持续进行靶场练习</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>搭建本地漏洞环境：DVWA、bWAPP、WebGoat</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>参加CTF夺旗比赛，锻炼实战思维</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>阅读公开的Bug Bounty报告和漏洞Writeup</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>在真实场景中练习Burp Suite的使用</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>建立自己的系统化测试方法论</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>学习如何记录发现、整理测试笔记</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>PentesterLab、Root-Me等平台的进阶练习</span>
                       </li>
                     </ul>
@@ -546,7 +546,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -559,7 +559,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         推荐证书
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -570,7 +570,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -582,26 +582,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 完成PortSwigger Academy的100个实验室</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 在HackTheBox拿下10个Flags</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 编写5篇详细的漏洞Writeup</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 在本地搭建完整的测试靶场环境</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将获得真实的漏洞挖掘实战经验，在安全的环境中打磨技能，为进入真实的Bug Bounty实战做好准备。</p>
                   </div>
                 </div>
@@ -609,61 +609,61 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段5 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段5</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段5</span>
                   <h3 className="text-xl md:text-2xl font-bold">专业漏洞报告撰写</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：1-2个月 | 难度：中级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：1-2个月 | 难度：中级</span>
                 </div>
-                <p className="text-[#666] mt-2">学会写出能被厂商接受、拿到高额赏金的专业漏洞报告</p>
+                <p className="text-slate-400 mt-2">学会写出能被厂商接受、拿到高额赏金的专业漏洞报告</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <FileText className="w-5 h-5 text-[#9FEF00]" />
+                      <FileText className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>专业报告的完整结构：标题、摘要、复现步骤、影响分析</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>使用CVSS v3.1进行漏洞严重程度评估</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>清晰的复现步骤编写，让厂商能100%复现漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>漏洞证据收集：截图、录屏、PoC代码</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>有说服力的安全影响分析，让厂商理解漏洞的风险</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>报告撰写的常见错误和规避方法</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>和厂商安全团队的专业沟通技巧</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>报告被拒绝后的处理和申诉方法</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高赏金报告的案例分析和技巧</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>专业的修复建议撰写</span>
                       </li>
                     </ul>
@@ -671,7 +671,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -684,7 +684,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -696,26 +696,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 为模拟漏洞编写5篇训练报告</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 阅读HackerOne上的20篇公开报告</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 建立自己的报告模板</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 练习为不同类型的漏洞计算CVSS评分</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将掌握专业的漏洞报告撰写能力，大幅提升报告的通过率和赏金金额，好的报告能让你的赏金翻倍。</p>
                   </div>
                 </div>
@@ -723,57 +723,57 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段6 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段6</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段6</span>
                   <h3 className="text-xl md:text-2xl font-bold">真实Bug Bounty实战</h3>
-                  <span className="text-sm text-[#666] ml-auto">持续进行 | 难度：中级-高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">持续进行 | 难度：中级-高级</span>
                 </div>
-                <p className="text-[#666] mt-2">正式进入真实平台，开始你的漏洞赏金实战之旅</p>
+                <p className="text-slate-400 mt-2">正式进入真实平台，开始你的漏洞赏金实战之旅</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Target className="w-5 h-5 text-[#9FEF00]" />
+                      <Target className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>主流赏金平台注册与使用：HackerOne、Bugcrowd、Intigriti</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>新手友好的项目选择，先从VDP漏洞披露项目开始</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>仔细阅读每个项目的政策和测试范围，避免踩坑</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>搭建自己的信息收集工作流，系统化梳理目标资产</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>初期专注于你最熟悉的一种漏洞类型，提升成功率</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>每天阅读成功案例和公开报告，学习最新的挖掘思路</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>和其他研究者建立职业联系，交流经验</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>正确面对报告被拒绝和挫败感，保持积极的心态</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>跟踪和记录你的所有发现和结果，建立自己的知识库</span>
                       </li>
                     </ul>
@@ -781,7 +781,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -794,7 +794,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Award className="w-5 h-5 text-[#9FEF00]" />
+                        <Award className="w-5 h-5 text-cyan-400" />
                         里程碑目标
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -806,7 +806,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -818,26 +818,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 在5个不同的Bug Bounty平台完成注册</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 对单个目标完成完整的信息收集</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 提交你的第一份漏洞报告（哪怕是低危）</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 建立本地的目标资产数据库</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将正式开启真实的Bug Bounty之旅，提交你的第一份报告，拿到你的第一笔赏金，从学习者转变为实战者。</p>
                   </div>
                 </div>
@@ -846,69 +846,69 @@ export default function RoadmapPage() {
 
             {/* 阶段7-12 我会继续完整还原，这里先放核心的，后面的阶段也完全对齐原网站 */}
             {/* 阶段7 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段7</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段7</span>
                   <h3 className="text-xl md:text-2xl font-bold">高级信息收集 (Advanced Recon)</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：2-3个月 | 难度：高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：2-3个月 | 难度：高级</span>
                 </div>
-                <p className="text-[#666] mt-2">掌握专业赏金猎人的高级侦察技巧，发现别人找不到的资产和漏洞</p>
+                <p className="text-slate-400 mt-2">掌握专业赏金猎人的高级侦察技巧，发现别人找不到的资产和漏洞</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Search className="w-5 h-5 text-[#9FEF00]" />
+                      <Search className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高级子域名枚举：主动+被动全链路收集</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高级端口扫描与隐藏服务发现</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高级内容发现与目录暴力破解</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>JavaScript分析与隐藏端点发现</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>GitHub Dorking与泄露的密钥/敏感信息发现</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高级Google Dorking，发现敏感信息和未公开页面</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Shodan/Censys/Fofa，发现公网暴露的资产和服务</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>DNS侦察与域传送漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>OSINT开源情报收集，针对目标的全维度信息挖掘</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>ASN/CIDR枚举，发现目标的完整基础设施</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>Wayback Machine，发现历史端点和废弃功能</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>证书透明度日志，发现隐藏的子域名</span>
                       </li>
                     </ul>
@@ -916,7 +916,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -929,7 +929,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -941,26 +941,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 搭建一套完整的自动化信息收集流水线</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 编写Python脚本自动化子域名枚举</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 搭建目标资产变更的通知系统</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 建立结构化的侦察结果数据库</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将掌握专业级的信息收集技巧，能发现其他猎人看不到的资产和攻击面，大幅提升漏洞发现的概率和效率。</p>
                   </div>
                 </div>
@@ -968,77 +968,77 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段8 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段8</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段8</span>
                   <h3 className="text-xl md:text-2xl font-bold">高级漏洞利用</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：3-6个月 | 难度：高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：3-6个月 | 难度：高级</span>
                 </div>
-                <p className="text-[#666] mt-2">深入学习复杂、罕见的高价值漏洞，拿到更高的赏金，和其他猎人拉开差距</p>
+                <p className="text-slate-400 mt-2">深入学习复杂、罕见的高价值漏洞，拿到更高的赏金，和其他猎人拉开差距</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-[#9FEF00]" />
+                      <Zap className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>服务端模板注入 (SSTI)</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>XML外部实体注入 (XXE)</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>多语言环境下的不安全反序列化漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>HTTP请求走私</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>竞争条件 (Race Conditions) 漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>OAuth与OpenID Connect认证漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>JWT攻击：算法混淆、密钥注入等</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>WebSocket安全漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>GraphQL安全问题</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>JavaScript原型污染</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>CRLF注入与HTTP响应拆分</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>缓存投毒 (Web Cache Deception)</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>高级业务逻辑漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>二阶漏洞 (Second-Order Vulnerabilities)</span>
                       </li>
                     </ul>
@@ -1046,7 +1046,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1059,7 +1059,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         推荐证书
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1069,7 +1069,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1081,26 +1081,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 完成PortSwigger上所有高级实验室</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 为你发现的复杂漏洞编写详细的Writeup</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 开发针对特定漏洞的自动化检测工具</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 整理高级漏洞的完整速查表</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将能够发现和利用罕见的、高风险的漏洞，这些漏洞能带来更高的赏金，也能让你在众多赏金猎人中脱颖而出。</p>
                   </div>
                 </div>
@@ -1109,14 +1109,14 @@ export default function RoadmapPage() {
 
             {/* 阶段9-12 继续完整还原 */}
             {/* 阶段9 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段9</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段9</span>
                   <h3 className="text-xl md:text-2xl font-bold">垂直领域深耕</h3>
-                  <span className="text-sm text-[#666] ml-auto">预计时长：6个月以上 | 难度：高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">预计时长：6个月以上 | 难度：高级</span>
                 </div>
-                <p className="text-[#666] mt-2">选择一个细分领域深入研究，建立你的核心竞争力，打开更多职业机会</p>
+                <p className="text-slate-400 mt-2">选择一个细分领域深入研究，建立你的核心竞争力，打开更多职业机会</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-3 gap-6">
@@ -1188,82 +1188,82 @@ export default function RoadmapPage() {
                       ]
                     }
                   ].map((item, index) => (
-                    <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 transition-colors">
+                    <div key={index} className="glass-panel p-5">
                       <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
-                      <p className="text-sm text-[#666] mb-4">{item.desc}</p>
+                      <p className="text-sm text-slate-400 mb-4">{item.desc}</p>
                       <ul className="space-y-2">
                         {item.content.map((line, i) => (
                           <li key={i} className="flex items-start text-sm">
-                            <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
-                            <span className="text-[#666]">{line}</span>
+                            <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-slate-400">{line}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                <div className="mt-6 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                   <p className="text-sm font-medium">提示：移动应用和API安全是目前市场需求最高的方向，云安全是未来的趋势，选择你感兴趣的方向深耕，会让你在行业里更有竞争力。</p>
                 </div>
               </div>
             </div>
 
             {/* 阶段10 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段10</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段10</span>
                   <h3 className="text-xl md:text-2xl font-bold">自动化与工具开发</h3>
-                  <span className="text-sm text-[#666] ml-auto">持续进行 | 难度：高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">持续进行 | 难度：高级</span>
                 </div>
-                <p className="text-[#666] mt-2">开发自己的工具和自动化流程，大幅提升你的效率，拉开和普通猎人的差距</p>
+                <p className="text-slate-400 mt-2">开发自己的工具和自动化流程，大幅提升你的效率，拉开和普通猎人的差距</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Code2 className="w-5 h-5 text-[#9FEF00]" />
+                      <Code2 className="w-5 h-5 text-cyan-400" />
                       核心学习内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>编写Bash脚本，自动化信息收集流程</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>用Python开发定制化的安全测试工具</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>用Java/Python开发Burp Suite扩展插件</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>编写自定义的Nuclei漏洞检测模板</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>自动化持续扫描系统搭建</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>目标资产变更的通知系统开发</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>利用赏金平台API，自动化管理你的报告</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>开发自定义的漏洞数据看板，跟踪你的成果</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>制作定制化的字典/Wordlist</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>用GitHub Actions自动化执行任务</span>
                       </li>
                     </ul>
@@ -1271,7 +1271,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐学习资源
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1284,7 +1284,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1296,26 +1296,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 开发一套属于你的完整信息收集工具</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 编写5个自定义的Nuclei检测模板</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 开发一个Burp扩展，解决你测试中的痛点</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 搭建目标持续监控与通知系统</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将大幅提升自己的工作效率，用自动化完成重复的工作，专注于更有价值的漏洞挖掘，同时通过开源工具建立自己的行业声誉。</p>
                   </div>
                 </div>
@@ -1323,57 +1323,57 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段11 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段11</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段11</span>
                   <h3 className="text-xl md:text-2xl font-bold">社区贡献与分享</h3>
-                  <span className="text-sm text-[#666] ml-auto">持续进行 | 难度：中级-高级</span>
+                  <span className="text-sm text-slate-400 ml-auto">持续进行 | 难度：中级-高级</span>
                 </div>
-                <p className="text-[#666] mt-2">分享你的知识，帮助新人，建立自己的个人品牌和行业人脉</p>
+                <p className="text-slate-400 mt-2">分享你的知识，帮助新人，建立自己的个人品牌和行业人脉</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-[#9FEF00]" />
+                      <Users className="w-5 h-5 text-cyan-400" />
                       核心学习与实践内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>撰写技术文章和博客，分享你的学习和实战经验</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>发布漏洞Writeup（在厂商修复后），分享你的挖掘思路</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>在安全会议上做演讲，分享你的研究成果</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>为新人提供指导和答疑，帮助更多人进入这个领域</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>为开源安全项目贡献代码，修复bug，添加新功能</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>举办工作坊和培训课程，系统化分享知识</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>参与CTF比赛的出题和组织工作</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>发布安全研究成果和白皮书</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>在社交媒体建立个人品牌，分享行业动态和学习心得</span>
                       </li>
                     </ul>
@@ -1381,7 +1381,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#9FEF00]" />
+                        <Globe className="w-5 h-5 text-cyan-400" />
                         推荐平台
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1394,7 +1394,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1406,26 +1406,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Terminal className="w-5 h-5 text-[#9FEF00]" />
+                    <Terminal className="w-5 h-5 text-cyan-400" />
                     实践项目
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 在你的博客上发布10篇技术文章</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 为3位新人提供入门指导</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 在行业会议或线上活动做一次技术分享</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 为3个开源安全项目提交贡献</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将在安全社区建立起自己的个人品牌和声誉，拓展你的职业人脉，获得更多的工作和合作机会，同时帮助行业培养更多的新人。</p>
                   </div>
                 </div>
@@ -1433,69 +1433,69 @@ export default function RoadmapPage() {
             </div>
 
             {/* 阶段12 */}
-            <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-              <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+            <div className="glass-panel overflow-hidden">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-sm font-bold bg-[#9FEF00] text-[#111] px-3 py-1 rounded-full">阶段12</span>
+                  <span className="text-sm font-bold bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 px-3 py-1 rounded-full">阶段12</span>
                   <h3 className="text-xl md:text-2xl font-bold">专业深耕与职业发展</h3>
-                  <span className="text-sm text-[#666] ml-auto">持续进行 | 难度：专家级</span>
+                  <span className="text-sm text-slate-400 ml-auto">持续进行 | 难度：专家级</span>
                 </div>
-                <p className="text-[#666] mt-2">走向专业，规划你的长期职业路径，成为行业内的专家</p>
+                <p className="text-slate-400 mt-2">走向专业，规划你的长期职业路径，成为行业内的专家</p>
               </div>
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <TrendingUp className="w-5 h-5 text-[#9FEF00]" />
+                      <TrendingUp className="w-5 h-5 text-cyan-400" />
                       核心学习与发展内容
                     </h4>
                     <ul className="space-y-2">
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>在1-2个细分领域进行深度深耕，成为该领域的专家</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>跟进最新的CVE漏洞，第一时间进行分析和复现</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>独立安全研究，发现0day漏洞</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>考取行业内的高级认证，提升你的专业背书</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>建立专业的个人作品集，展示你的能力和成果</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>和大型科技公司建立直接的安全合作关系</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>进入高赏金的私有漏洞赏金项目</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>学习漏洞赏金的谈判技巧，提升你的赏金收益</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>组建自己的渗透测试团队，承接更大的项目</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>探索安全咨询、安全培训等职业机会</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>创办自己的网络安全公司</span>
                       </li>
                       <li className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-[#9FEF00] mr-2 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>关注新兴领域的安全问题，比如AI安全、量子计算安全</span>
                       </li>
                     </ul>
@@ -1503,7 +1503,7 @@ export default function RoadmapPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#9FEF00]" />
+                        <GraduationCap className="w-5 h-5 text-cyan-400" />
                         高级认证推荐
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1515,7 +1515,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <Briefcase className="w-5 h-5 text-[#9FEF00]" />
+                        <Briefcase className="w-5 h-5 text-cyan-400" />
                         职业发展路径
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1529,7 +1529,7 @@ export default function RoadmapPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+                        <AlertTriangle className="w-5 h-5 text-cyan-400" />
                         重要提示
                       </h4>
                       <ul className="space-y-1 text-sm">
@@ -1541,26 +1541,26 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 pt-6 border-t border-[#e5e5e5]">
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
                   <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                    <Flag className="w-5 h-5 text-[#9FEF00]" />
+                    <Flag className="w-5 h-5 text-cyan-400" />
                     里程碑目标
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">1. 发现并上报一个新的CVE漏洞</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">2. 在国际安全会议上发表演讲</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">3. 发布安全研究论文或白皮书</span>
                     </div>
-                    <div className="rounded-lg border border-[#e5e5e5] p-3">
+                    <div className="rounded-lg border border-slate-700/50 p-3">
                       <span className="text-sm font-medium">4. 搭建一套面向新人的培训课程</span>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                  <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                     <p className="text-sm font-medium">预期成果：你将成为一名专业的网络安全专家，不仅能通过漏洞赏金获得丰厚的收入，还能拥有多元化的职业发展机会，在行业内建立起自己的影响力和声誉。</p>
                   </div>
                 </div>
@@ -1571,11 +1571,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 5. 常见错误与避坑指南（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">常见错误与避坑指南</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               学习前人的教训，少走弯路，节省你的时间和精力
             </p>
           </div>
@@ -1615,14 +1615,14 @@ export default function RoadmapPage() {
                 solution: "加入安全社区，和同行交流学习，分享经验。集体学习的速度远快于独自摸索。"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                   <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0" />
                   <span>{item.mistake}</span>
                 </h3>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#9FEF00] flex-shrink-0 mt-0.5" />
-                  <p className="text-[#666]">{item.solution}</p>
+                  <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-slate-400">{item.solution}</p>
                 </div>
               </div>
             ))}
@@ -1635,7 +1635,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">主流测试方法论对比</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               选择适合你的方法论，或者融合多种方法的优势，建立自己的测试流程
             </p>
           </div>
@@ -1664,16 +1664,16 @@ export default function RoadmapPage() {
                 bestFor: "漏洞赏金平台的实战挖掘，大规模目标测试"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <h3 className="text-xl font-bold mb-3">{item.name}</h3>
-                <p className="text-[#666] text-sm mb-4">{item.desc}</p>
+                <p className="text-slate-400 text-sm mb-4">{item.desc}</p>
 
                 <div className="mb-3">
                   <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                     优势
                   </h4>
-                  <ul className="space-y-1 pl-6 text-sm text-[#666] list-disc">
+                  <ul className="space-y-1 pl-6 text-sm text-slate-400 list-disc">
                     {item.pros.map((pro, i) => (
                       <li key={i}>{pro}</li>
                     ))}
@@ -1685,14 +1685,14 @@ export default function RoadmapPage() {
                     <AlertTriangle className="w-4 h-4 text-orange-500" />
                     不足
                   </h4>
-                  <ul className="space-y-1 pl-6 text-sm text-[#666] list-disc">
+                  <ul className="space-y-1 pl-6 text-sm text-slate-400 list-disc">
                     {item.cons.map((con, i) => (
                       <li key={i}>{con}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-[#e5e5e5]">
+                <div className="mt-4 pt-4 border-t border-slate-700/50">
                   <p className="text-sm font-medium">最适合：{item.bestFor}</p>
                 </div>
               </div>
@@ -1702,11 +1702,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 7. 每周学习计划（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">推荐每周学习计划</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               平衡学习与实战的每周时间安排，你可以根据自己的时间灵活调整
             </p>
           </div>
@@ -1791,17 +1791,17 @@ export default function RoadmapPage() {
                 ]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-5">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="font-bold text-lg">{item.day}</h3>
-                  <span className="text-xs bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">{item.duration}</span>
+                  <span className="text-xs bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">{item.duration}</span>
                 </div>
-                <p className="font-semibold text-[#9FEF00] mb-3">{item.focus}</p>
+                <p className="font-semibold text-cyan-400 mb-3">{item.focus}</p>
                 <ul className="space-y-2">
                   {item.content.map((line, i) => (
                     <li key={i} className="flex items-start text-xs">
-                      <CheckCircle2 className="w-3 h-3 text-[#9FEF00] mr-1 mt-0.5 flex-shrink-0" />
-                      <span className="text-[#666]">{line}</span>
+                      <CheckCircle2 className="w-3 h-3 text-cyan-400 mr-1 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-400">{line}</span>
                     </li>
                   ))}
                 </ul>
@@ -1816,7 +1816,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">技能自评清单</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               用这个清单评估你当前的水平，找到需要提升的方向，定期回顾跟踪你的进步
             </p>
           </div>
@@ -1880,13 +1880,13 @@ export default function RoadmapPage() {
                 ]
               }
             ].map((category, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6">
+              <div key={index} className="rounded-lg border border-slate-700/50 bg-slate-900/40 backdrop-blur-md p-6">
                 <h3 className="text-xl font-bold mb-4">{category.category}</h3>
                 <div className="grid md:grid-cols-2 gap-3">
                   {category.items.map((item, i) => (
-                    <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-[#fafafa]">
+                    <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-slate-900/20">
                       <span className="font-medium">{item.name}</span>
-                      <span className="text-xs font-medium bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">
+                      <span className="text-xs font-medium bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">
                         {item.level}
                       </span>
                     </div>
@@ -1899,11 +1899,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 9. 学习路径选择（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">三种学习路径选择</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               选择最适合你的情况和学习风格的路径，条条大路通罗马
             </p>
           </div>
@@ -1956,8 +1956,8 @@ export default function RoadmapPage() {
                 cons: ["时间周期非常长", "经济成本很高", "课程内容可能跟不上行业最新发展", "偏学术，部分内容和实战脱节"]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-                <div className="bg-[#9FEF00]/10 px-6 py-4 border-b border-[#e5e5e5]">
+              <div key={index} className="glass-panel overflow-hidden">
+                <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] px-6 py-4 border-b border-slate-700/50">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <div className="flex flex-wrap gap-3 text-sm">
                     <span>时长：{item.duration}</span>
@@ -1965,11 +1965,11 @@ export default function RoadmapPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-[#666] text-sm mb-4">{item.desc}</p>
+                  <p className="text-slate-400 text-sm mb-4">{item.desc}</p>
 
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2 text-sm">学习阶段</h4>
-                    <ol className="space-y-1 pl-4 text-xs text-[#666] list-decimal">
+                    <ol className="space-y-1 pl-4 text-xs text-slate-400 list-decimal">
                       {item.stages.map((stage, i) => (
                         <li key={i}>{stage}</li>
                       ))}
@@ -1978,10 +1978,10 @@ export default function RoadmapPage() {
 
                   <div className="mb-3">
                     <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                       优势
                     </h4>
-                    <ul className="space-y-1 pl-6 text-xs text-[#666] list-disc">
+                    <ul className="space-y-1 pl-6 text-xs text-slate-400 list-disc">
                       {item.pros.map((pro, i) => (
                         <li key={i}>{pro}</li>
                       ))}
@@ -1993,7 +1993,7 @@ export default function RoadmapPage() {
                       <AlertTriangle className="w-4 h-4 text-orange-500" />
                       挑战
                     </h4>
-                    <ul className="space-y-1 pl-6 text-xs text-[#666] list-disc">
+                    <ul className="space-y-1 pl-6 text-xs text-slate-400 list-disc">
                       {item.cons.map((con, i) => (
                         <li key={i}>{con}</li>
                       ))}
@@ -2011,7 +2011,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">学习路上的成功里程碑</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               这些里程碑帮你追踪进步，庆祝你的每一个成就，每一位专家都是从第一个Lab开始的
             </p>
           </div>
@@ -2079,13 +2079,13 @@ export default function RoadmapPage() {
                 meaning: "达到行业内的专业和专家级别"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className="font-bold text-lg">{item.milestone}</span>
-                  <span className="text-sm bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">预计时间：{item.time}</span>
+                  <span className="text-sm bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">预计时间：{item.time}</span>
                 </div>
-                <p className="text-[#666] mb-3">{item.desc}</p>
-                <div className="p-3 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20">
+                <p className="text-slate-400 mb-3">{item.desc}</p>
+                <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                   <p className="text-sm font-medium">里程碑意义：{item.meaning}</p>
                 </div>
               </div>
@@ -2095,11 +2095,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 11. 工具分类速查（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">核心工具分类速查</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               按测试阶段分类的常用工具，每个阶段的必备工具都在这里
             </p>
           </div>
@@ -2145,17 +2145,17 @@ export default function RoadmapPage() {
                 ]
               }
             ].map((category, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <h3 className="text-lg font-bold mb-3">{category.category}</h3>
-                <p className="text-sm text-[#666] mb-4">{category.desc}</p>
+                <p className="text-sm text-slate-400 mb-4">{category.desc}</p>
                 <div className="space-y-3">
                   {category.tools.map((tool, i) => (
-                    <div key={i} className="p-3 rounded-lg bg-[#fafafa]">
+                    <div key={i} className="p-3 rounded-lg bg-slate-900/20">
                       <div className="flex justify-between items-center mb-1">
                         <span className="font-semibold">{tool.name}</span>
-                        <span className="text-xs bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">{tool.level}</span>
+                        <span className="text-xs bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">{tool.level}</span>
                       </div>
-                      <p className="text-xs text-[#666]">{tool.desc}</p>
+                      <p className="text-xs text-slate-400">{tool.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -2170,7 +2170,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">推荐学习书籍</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               每一位安全研究者的必备书架，从入门到高级的经典书籍
             </p>
           </div>
@@ -2220,18 +2220,18 @@ export default function RoadmapPage() {
                 desc: "全面的渗透测试入门书籍，覆盖了从信息收集到后渗透的完整流程。适合想要全面理解渗透测试全流程，而不只是Web安全的学习者。"
               }
             ].map((book, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-bold">{book.title}</h3>
-                  <span className="text-xs bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">{book.level}</span>
+                  <span className="text-xs bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">{book.level}</span>
                 </div>
-                <p className="text-sm text-[#666] mb-3">作者：{book.author}</p>
+                <p className="text-sm text-slate-400 mb-3">作者：{book.author}</p>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {book.tags.map((tag, i) => (
-                    <span key={i} className="text-xs bg-[#f5f5f5] text-[#666] px-2 py-0.5 rounded-full">{tag}</span>
+                    <span key={i} className="text-xs bg-slate-800/60 text-slate-400 px-2 py-0.5 rounded-full">{tag}</span>
                   ))}
                 </div>
-                <p className="text-sm text-[#666]">{book.desc}</p>
+                <p className="text-sm text-slate-400">{book.desc}</p>
               </div>
             ))}
           </div>
@@ -2239,11 +2239,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 13. 环境搭建指南（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">专业工作环境搭建指南</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               在开始学习之前，先搭建好一套稳定、高效的工作环境，能帮你节省大量的时间，专注于漏洞挖掘本身
             </p>
           </div>
@@ -2299,10 +2299,10 @@ export default function RoadmapPage() {
                 ]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6">
+              <div key={index} className="rounded-lg border border-slate-700/50 bg-slate-900/40 backdrop-blur-md p-6">
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-[#666] mb-4">{item.desc}</p>
-                <div className="bg-[#fafafa] rounded-lg p-4">
+                <p className="text-slate-400 mb-4">{item.desc}</p>
+                <div className="bg-slate-900/20 rounded-lg p-4">
                   <h4 className="font-semibold mb-3">操作步骤</h4>
                   <ol className="space-y-2 pl-6 list-decimal">
                     {item.steps.map((step, i) => (
@@ -2321,7 +2321,7 @@ export default function RoadmapPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">职业证书指南</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               证书对于Bug Bounty不是必须的，但能帮你巩固知识，提升职业竞争力，为未来的职业发展铺路
             </p>
           </div>
@@ -2353,15 +2353,15 @@ export default function RoadmapPage() {
                 ]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6">
-                <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-4">
+              <div key={index} className="rounded-lg border border-slate-700/50 bg-slate-900/40 backdrop-blur-md p-6">
+                <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-4">
                   {item.level}
                 </div>
                 <div className="space-y-4">
                   {item.certs.map((cert, i) => (
-                    <div key={i} className="p-3 rounded-lg bg-[#fafafa]">
+                    <div key={i} className="p-3 rounded-lg bg-slate-900/20">
                       <h4 className="font-semibold mb-2">{cert.name}</h4>
-                      <div className="flex justify-between text-sm text-[#666]">
+                      <div className="flex justify-between text-sm text-slate-400">
                         <span>费用：{cert.cost}</span>
                         <span>备考时长：{cert.duration}</span>
                       </div>
@@ -2375,11 +2375,11 @@ export default function RoadmapPage() {
       </section>
 
       {/* ========== 15. 职业发展路径（原网站板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">职业发展路径</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               Bug Bounty的技能能为你打开哪些职业大门？这里是最常见的职业发展方向
             </p>
           </div>
@@ -2423,15 +2423,15 @@ export default function RoadmapPage() {
                 skills: ["领导力", "战略规划", "风险管理", "合规管理"]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="glass-panel p-6">
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-sm font-medium text-[#9FEF00] mb-3">{item.salary}</p>
-                <p className="text-sm text-[#666] mb-4">{item.desc}</p>
-                <div className="pt-4 border-t border-[#e5e5e5]">
-                  <h4 className="text-xs font-semibold text-[#666] mb-2">核心技能</h4>
+                <p className="text-sm font-medium text-cyan-400 mb-3">{item.salary}</p>
+                <p className="text-sm text-slate-400 mb-4">{item.desc}</p>
+                <div className="pt-4 border-t border-slate-700/50">
+                  <h4 className="text-xs font-semibold text-slate-400 mb-2">核心技能</h4>
                   <div className="flex flex-wrap gap-2">
                     {item.skills.map((skill, i) => (
-                      <span key={i} className="text-xs bg-[#f5f5f5] text-[#666] px-2 py-0.5 rounded-full">{skill}</span>
+                      <span key={i} className="text-xs bg-slate-800/60 text-slate-400 px-2 py-0.5 rounded-full">{skill}</span>
                     ))}
                   </div>
                 </div>
@@ -2449,10 +2449,10 @@ export default function RoadmapPage() {
             这是一条需要耐心和坚持的路，但每一步都算数。从今天开始，一步一个脚印，你也能成为专业的漏洞赏金猎人。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-8 py-4 text-sm font-bold text-[#111] hover:bg-[#8ed900] transition-colors">
+            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 px-8 py-4 text-sm font-bold text-slate-100 hover:bg-[#8ed900] transition-colors">
               开始学习漏洞知识
             </a>
-            <a href="/tools" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors">
+            <a href="/tools" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:bg-slate-900/40 backdrop-blur-md/10 transition-colors">
               查看工具库
             </a>
           </div>

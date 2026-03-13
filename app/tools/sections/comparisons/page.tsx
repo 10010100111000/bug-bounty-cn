@@ -64,30 +64,30 @@ export default function ComparisonsSection() {
   ];
 
   return (
-    <section className="py-16 bg-[#fafafa]">
+    <section className="py-16 bg-slate-900/20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">工具对比</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             同类工具的优缺点对比，帮助你选择最适合的工具。
           </p>
         </div>
 
         <div className="space-y-8">
           {comparisons.map((comparison, idx) => (
-            <div key={idx} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+            <div key={idx} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
               <h3 className="text-xl font-bold mb-6">{comparison.title}</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {comparison.items.map((item, i) => (
-                  <div key={i} className="p-4 rounded-lg bg-[#fafafa] border border-[#e5e5e5]">
+                  <div key={i} className="p-4 rounded-lg bg-slate-900/20 border border-slate-700/50">
                     <h4 className="font-bold mb-4 text-center">{item.name}</h4>
                     
                     <div className="mb-4">
                       <h5 className="text-sm font-bold text-green-600 mb-2">✓ 优点</h5>
                       <ul className="space-y-1">
                         {item.pros.map((pro, j) => (
-                          <li key={j} className="text-sm text-[#666] flex items-start gap-2">
-                            <span className="text-green-500">✓</span>
+                          <li key={j} className="text-sm text-slate-400 flex items-start gap-2">
+                            <span className="text-cyan-400">✓</span>
                             {pro}
                           </li>
                         ))}
@@ -98,7 +98,7 @@ export default function ComparisonsSection() {
                       <h5 className="text-sm font-bold text-red-600 mb-2">✗ 缺点</h5>
                       <ul className="space-y-1">
                         {item.cons.map((con, j) => (
-                          <li key={j} className="text-sm text-[#666] flex items-start gap-2">
+                          <li key={j} className="text-sm text-slate-400 flex items-start gap-2">
                             <span className="text-red-500">✗</span>
                             {con}
                           </li>

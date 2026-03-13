@@ -43,9 +43,9 @@ export default function CommonMistakes() {
 
       <div className="grid md:grid-cols-2 gap-4">
         {mistakes.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <h4 className="text-lg font-bold mb-2 text-red-600">{item.title}</h4>
-            <p className="text-[#666]">{item.desc}</p>
+            <p className="text-slate-400">{item.desc}</p>
           </div>
         ))}
       </div>

@@ -25,11 +25,11 @@ export default function GettingStartedTab() {
       {/* ========== 第一部分：你可以测试的目标类型 ========== */}
       <section>
         <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
             测试目标
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">你可以测试哪些目标？</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             漏洞赏金计划中，常见的可测试目标类型，不同的目标类型需要不同的测试技能和方法
           </p>
         </div>
@@ -77,12 +77,12 @@ export default function GettingStartedTab() {
               desc: "Windows、macOS、Linux的桌面客户端软件，权限问题、DLL劫持、代码执行、本地漏洞等。"
             }
           ].map((item, index) => (
-            <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 hover:shadow-sm transition-all">
-              <div className="w-10 h-10 rounded-full bg-[#9FEF00]/10 flex items-center justify-center text-[#9FEF00] mb-4">
+            <div key={index} className="rounded-lg border border-slate-700/50 bg-slate-900/40 backdrop-blur-md p-5 hover:border-cyan-400/40 hover:shadow-sm transition-all">
+              <div className="w-10 h-10 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] flex items-center justify-center text-cyan-400 mb-4">
                 {item.icon}
               </div>
               <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-[#666]">{item.desc}</p>
+              <p className="text-sm text-slate-400">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -91,11 +91,11 @@ export default function GettingStartedTab() {
       {/* ========== 第二部分：如何分配你的测试时间 ========== */}
       <section>
         <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
             时间管理
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">如何分配你的测试时间？</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             资深赏金猎人的时间分配经验，帮你避开无效努力，最大化漏洞发现效率
           </p>
         </div>
@@ -107,42 +107,42 @@ export default function GettingStartedTab() {
               percent: 5,
               time: "≈ 30分钟",
               desc: "完整阅读项目规则、明确测试范围、禁止项、赏金规则，这是最基础也最关键的一步，避免踩坑。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "信息收集与侦察 (Recon)",
               percent: 30,
               time: "≈ 3小时",
               desc: "子域名枚举、端口扫描、技术栈识别、端点发现、参数收集，信息收集决定了80%的漏洞发现概率。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "漏洞测试与深度挖掘",
               percent: 15,
               time: "≈ 1.5小时",
               desc: "对收集到的端点和功能，进行针对性的漏洞测试，验证潜在的安全问题。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "权限提升与漏洞利用",
               percent: 35,
               time: "≈ 3.5小时",
               desc: "把发现的小漏洞升级，构建利用链，最大化漏洞的危害影响，这是决定赏金高低的核心环节。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "漏洞报告编写",
               percent: 10,
               time: "≈ 1小时",
               desc: "编写清晰、完整、可复现的漏洞报告，包含复现步骤、PoC、影响分析、修复建议。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "漏洞复现与验证",
               percent: 5,
               time: "≈ 30分钟",
               desc: "在提交报告前，完整复现漏洞，确保步骤清晰、PoC有效，避免因为复现问题被驳回。",
-              color: "bg-[#9FEF00]"
+              color: "bg-gradient-to-r from-violet-500 to-cyan-500"
             },
             {
               title: "后续跟进与沟通",
@@ -152,21 +152,21 @@ export default function GettingStartedTab() {
               color: "bg-[#e5e5e5]"
             }
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-4">
+            <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-4">
               <div className="flex justify-between items-center mb-2">
                 <div>
                   <h4 className="font-semibold">{item.title}</h4>
-                  <p className="text-xs text-[#666]">{item.time}</p>
+                  <p className="text-xs text-slate-400">{item.time}</p>
                 </div>
                 <span className="text-sm font-bold">{item.percent}%</span>
               </div>
-              <div className="w-full bg-[#f5f5f5] rounded-full h-2 mb-3">
+              <div className="w-full bg-slate-800/60 rounded-full h-2 mb-3">
                 <div 
                   className={`h-full rounded-full ${item.color} transition-all`}
                   style={{ width: `${item.percent}%` }}
                 ></div>
               </div>
-              <p className="text-sm text-[#666]">{item.desc}</p>
+              <p className="text-sm text-slate-400">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -177,11 +177,11 @@ export default function GettingStartedTab() {
         {/* 左边：成功的报告编写技巧 */}
         <div>
           <div className="text-center mb-6">
-            <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+            <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
               报告编写
             </div>
             <h2 className="text-2xl font-bold mb-2">写出成功报告的技巧</h2>
-            <p className="text-[#666]">好的报告能大幅提高漏洞的接受率和赏金金额</p>
+            <p className="text-slate-400">好的报告能大幅提高漏洞的接受率和赏金金额</p>
           </div>
 
           <div className="space-y-2">
@@ -235,21 +235,21 @@ export default function GettingStartedTab() {
                 desc: "把触发漏洞的完整HTTP请求包和响应包附上，方便审核人员快速复现和验证漏洞。"
               }
             ].map((item, index) => (
-              <div key={index} className="border border-[#e5e5e5] rounded-lg overflow-hidden bg-white">
+              <div key={index} className="border border-slate-700/50 rounded-lg overflow-hidden bg-slate-900/40 backdrop-blur-md">
                 <button
                   className="w-full flex justify-between items-center p-4 text-left"
                   onClick={() => setOpenReportTips(openReportTips === index ? null : index)}
                 >
                   <span className="font-semibold">{item.title}</span>
                   {openReportTips === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#666]" />
+                    <ChevronUp className="w-5 h-5 text-slate-400" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-[#666]" />
+                    <ChevronDown className="w-5 h-5 text-slate-400" />
                   )}
                 </button>
                 {openReportTips === index && (
-                  <div className="p-4 pt-0 border-t border-[#e5e5e5]">
-                    <p className="text-sm text-[#666]">{item.desc}</p>
+                  <div className="p-4 pt-0 border-t border-slate-700/50">
+                    <p className="text-sm text-slate-400">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -260,11 +260,11 @@ export default function GettingStartedTab() {
         {/* 右边：Bug Bounty的第一步 新手FAQ */}
         <div>
           <div className="text-center mb-6">
-            <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+            <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
               新手常见问题
             </div>
             <h2 className="text-2xl font-bold mb-2">Bug Bounty 第一步常见问题</h2>
-            <p className="text-[#666]">新手最常问的问题，帮你避开入门的困惑</p>
+            <p className="text-slate-400">新手最常问的问题，帮你避开入门的困惑</p>
           </div>
 
           <div className="space-y-2">
@@ -310,21 +310,21 @@ export default function GettingStartedTab() {
                 answer: "如果企业有正式的VDP或BBP项目，必须通过项目规定的渠道提交报告，不要私下联系员工。如果企业没有公开的漏洞披露政策，建议谨慎测试，因为未授权的测试可能会给你带来法律风险。"
               }
             ].map((item, index) => (
-              <div key={index} className="border border-[#e5e5e5] rounded-lg overflow-hidden bg-white">
+              <div key={index} className="border border-slate-700/50 rounded-lg overflow-hidden bg-slate-900/40 backdrop-blur-md">
                 <button
                   className="w-full flex justify-between items-center p-4 text-left"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <span className="font-semibold">{item.question}</span>
                   {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#666]" />
+                    <ChevronUp className="w-5 h-5 text-slate-400" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-[#666]" />
+                    <ChevronDown className="w-5 h-5 text-slate-400" />
                   )}
                 </button>
                 {openFaq === index && (
-                  <div className="p-4 pt-0 border-t border-[#e5e5e5]">
-                    <p className="text-sm text-[#666]">{item.answer}</p>
+                  <div className="p-4 pt-0 border-t border-slate-700/50">
+                    <p className="text-sm text-slate-400">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -336,11 +336,11 @@ export default function GettingStartedTab() {
       {/* ========== 第四部分：理想的漏洞报告结构 ========== */}
       <section>
         <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
             报告模板
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">理想的漏洞报告结构</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             专业的漏洞报告标准结构，帮你写出高通过率、高赏金的报告
           </p>
         </div>
@@ -390,15 +390,15 @@ export default function GettingStartedTab() {
               example: "示例：\n1. 对用户输入的内容进行严格的过滤和转义，对特殊字符进行HTML实体编码\n2. 实施内容安全策略（CSP），限制未授权的脚本执行\n3. 对输出到前端的内容进行统一的转义处理，避免XSS漏洞"
             }
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+            <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9FEF00] text-[#111] font-bold flex items-center justify-center">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 font-bold flex items-center justify-center">
                   {item.step}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-[#666] mb-3">{item.desc}</p>
-                  <div className="bg-[#f5f5f5] rounded-lg p-3 text-sm font-mono whitespace-pre-wrap">
+                  <p className="text-slate-400 mb-3">{item.desc}</p>
+                  <div className="bg-slate-800/60 rounded-lg p-3 text-sm font-mono whitespace-pre-wrap">
                     {item.example}
                   </div>
                 </div>
@@ -411,11 +411,11 @@ export default function GettingStartedTab() {
       {/* ========== 第五部分：新手必须避免的错误 ========== */}
       <section>
         <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
             避坑指南
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">新手必须避免的错误</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             这些常见错误会导致你的报告被驳回、账号被封禁，甚至面临法律风险，一定要避开
           </p>
         </div>
@@ -463,18 +463,18 @@ export default function GettingStartedTab() {
               right: "在企业完成漏洞修复，并且明确给你授权公开之前，绝对不要向任何人泄露漏洞的细节，严格遵守负责任披露的行业准则。"
             }
           ].map((item, index) => (
-            <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:shadow-sm transition-all">
+            <div key={index} className="rounded-lg border border-slate-700/50 bg-slate-900/40 backdrop-blur-md p-5 hover:shadow-sm transition-all">
               <div className="flex items-center gap-2 mb-3">
                 <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <h3 className="font-bold text-lg">{item.title}</h3>
               </div>
               <div className="mb-3">
                 <h4 className="text-sm font-semibold text-red-600 mb-1">❌ 错误做法</h4>
-                <p className="text-sm text-[#666]">{item.mistake}</p>
+                <p className="text-sm text-slate-400">{item.mistake}</p>
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-green-600 mb-1">✅ 正确做法</h4>
-                <p className="text-sm text-[#666]">{item.right}</p>
+                <p className="text-sm text-slate-400">{item.right}</p>
               </div>
             </div>
           ))}
@@ -484,11 +484,11 @@ export default function GettingStartedTab() {
       {/* ========== 第六部分：完整的测试实战流程示例 ========== */}
       <section>
         <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-2">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-2">
             实战流程
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">实战示例：完整的测试工作流</h2>
-          <p className="text-[#666] max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             从拿到项目到提交报告的完整标准化流程，资深赏金猎人的实战步骤
           </p>
         </div>
@@ -538,20 +538,20 @@ export default function GettingStartedTab() {
               duration: "按需跟进"
             }
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+            <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
               <div className="flex justify-between items-start mb-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#9FEF00] text-[#111] font-bold flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 font-bold flex items-center justify-center">
                     {item.step}
                   </div>
                   <h3 className="text-lg font-bold">{item.title}</h3>
                 </div>
-                <span className="text-xs font-medium bg-[#f5f5f5] px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs font-medium bg-slate-800/60 px-2 py-1 rounded-full flex items-center gap-1">
                   <Clock className="w-3 h-3" />
                   {item.duration}
                 </span>
               </div>
-              <p className="text-[#666]">{item.desc}</p>
+              <p className="text-slate-400">{item.desc}</p>
             </div>
           ))}
         </div>

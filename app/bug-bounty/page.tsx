@@ -67,29 +67,29 @@ export default function BugBountyFullGuidePage() {
   const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component || <GettingStartedTab />;
 
   return (
-    <div className="bg-[#fafafa] min-h-screen">
+    <div className="bg-slate-900/20 min-h-screen">
       {/* ========== 页面顶部标题区 ========== */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-slate-900/40 backdrop-blur-md">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium mb-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium mb-4">
             从零到专业的完整指南
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             什么是 Bug Bounty？
           </h1>
-          <p className="text-[#666] text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
             从零开始，全面理解漏洞赏金的完整世界，从基础定义、新手实战、合规规则，到行业术语、收入预期，全覆盖讲解
           </p>
           {/* 核心CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#guide-content" 
-              className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-8 py-4 text-sm font-bold text-[#111] hover:bg-[#8ed900] transition-colors gap-2"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 px-8 py-4 text-sm font-bold text-slate-100 hover:bg-[#8ed900] transition-colors gap-2"
             >
               <Rocket className="w-4 h-4" />
               从这里开始
             </a>
-            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-8 py-4 text-sm font-bold hover:bg-[#f5f5f5] transition-colors">
+            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-8 py-4 text-sm font-bold hover:bg-slate-800/60 transition-colors">
               查看完整学习路线
             </a>
           </div>
@@ -97,7 +97,7 @@ export default function BugBountyFullGuidePage() {
       </section>
 
       {/* ========== 粘性标签页导航栏 ========== */}
-      <div id="guide-content" className="sticky top-0 z-50 bg-white border-b border-[#e5e5e5] shadow-sm">
+      <div id="guide-content" className="sticky top-0 z-50 bg-slate-900/40 backdrop-blur-md border-b border-slate-700/50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto hide-scrollbar">
             <div className="flex space-x-1 md:space-x-2 w-full justify-between md:justify-start">
@@ -107,8 +107,8 @@ export default function BugBountyFullGuidePage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-4 py-3 rounded-t-lg font-medium text-sm md:text-base transition-all whitespace-nowrap border-b-2 ${
                     activeTab === tab.id
-                      ? 'border-[#9FEF00] text-[#111] bg-[#9FEF00]/5'
-                      : 'border-transparent text-[#666] hover:text-[#111] hover:bg-[#fafafa]'
+                      ? 'border-[#9FEF00] text-slate-100 bg-cyan-500/10'
+                      : 'border-transparent text-slate-400 hover:text-slate-100 hover:bg-slate-900/20'
                   }`}
                 >
                   {tab.icon}
@@ -126,23 +126,23 @@ export default function BugBountyFullGuidePage() {
       </div>
 
       {/* ========== 底部下一步引导区 ========== */}
-      <section className="py-16 bg-white border-t border-[#e5e5e5] mt-10">
+      <section className="py-16 bg-slate-900/40 backdrop-blur-md border-t border-slate-700/50 mt-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">准备好开启你的漏洞赏金之旅了吗？</h2>
-          <p className="text-[#666] text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
             现在你已经理解了Bug Bounty的完整体系，接下来可以从漏洞知识、工具指南、实战方法论开始，一步一步搭建你的技能体系。
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-bold text-[#111] hover:bg-[#8ed900] transition-colors">
+            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 px-6 py-3 text-sm font-bold text-slate-100 hover:bg-[#8ed900] transition-colors">
               查看完整学习路线
             </a>
-            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-[#f5f5f5] transition-colors">
+            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-slate-800/60 transition-colors">
               学习漏洞知识
             </a>
-            <a href="/tools" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-[#f5f5f5] transition-colors">
+            <a href="/tools" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-slate-800/60 transition-colors">
               安全工具指南
             </a>
-            <a href="/platforms" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-[#f5f5f5] transition-colors">
+            <a href="/platforms" className="inline-flex items-center justify-center rounded-full border border-[#333] bg-transparent px-6 py-3 text-sm font-bold hover:bg-slate-800/60 transition-colors">
               赏金平台大全
             </a>
           </div>

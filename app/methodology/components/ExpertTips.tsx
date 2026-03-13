@@ -47,12 +47,12 @@ export default function ExpertTips() {
 
       <div className="grid md:grid-cols-2 gap-6">
         {tipCategories.map((category, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <h4 className="text-lg font-bold mb-4">{category.title}</h4>
             <ul className="space-y-2">
               {category.tips.map((tip, i) => (
-                <li key={i} className="text-sm text-[#666] flex items-start gap-2">
-                  <span className="text-[#9FEF00] mt-1 flex-shrink-0">✓</span>
+                <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
+                  <span className="text-cyan-400 mt-1 flex-shrink-0">✓</span>
                   {tip}
                 </li>
               ))}

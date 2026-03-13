@@ -106,20 +106,20 @@ tree $BASE_DIR/$TARGET`
     <div>
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">自动化脚本</h2>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           现成可用的自动化脚本，大幅提升你的工作效率。
         </p>
       </div>
 
       <div className="space-y-8">
         {scripts.map((script, idx) => (
-          <div key={idx} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={idx} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <div className="mb-4">
               <h3 className="text-xl font-bold mb-2">{script.title}</h3>
-              <p className="text-[#666]">{script.desc}</p>
+              <p className="text-slate-400">{script.desc}</p>
             </div>
             <div className="bg-[#1a1a1a] rounded-lg p-4 overflow-x-auto">
-              <pre className="text-sm text-[#9FEF00] whitespace-pre-wrap break-all">
+              <pre className="text-sm text-cyan-400 whitespace-pre-wrap break-all">
                 {script.code}
               </pre>
             </div>

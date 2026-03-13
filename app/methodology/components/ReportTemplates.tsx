@@ -4,7 +4,7 @@ export default function ReportTemplates() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">报告模板</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           使用这些模板作为编写报告的起点。根据漏洞类型和项目进行调整。
         </p>
       </div>
@@ -121,10 +121,10 @@ AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N
 
 function ReportTemplateCard({ title, content }: { title: string; content: string }) {
   return (
-    <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+    <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
       <h4 className="text-lg font-bold mb-4">{title}</h4>
-      <div className="bg-[#fafafa] rounded-lg p-4 overflow-x-auto">
-        <pre className="text-sm whitespace-pre-wrap break-all text-[#666]">
+      <div className="bg-slate-900/20 rounded-lg p-4 overflow-x-auto">
+        <pre className="text-sm whitespace-pre-wrap break-all text-slate-400">
           {content}
         </pre>
       </div>

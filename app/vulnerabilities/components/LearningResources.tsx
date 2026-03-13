@@ -44,28 +44,28 @@ export default function LearningResources() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">漏洞学习优质资源</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           免费与付费的优质学习平台，帮你深入理解每一类安全漏洞，提升实战能力。
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
         {resourcesList.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             <div className="mb-3">
               <h4 className="text-lg font-bold mb-1">{item.name}</h4>
-              <span className="px-2 py-0.5 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium">
+              <span className="px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium">
                 适用人群：{item.level}
               </span>
             </div>
 
-            <p className="text-[#666] text-sm mb-4">{item.desc}</p>
+            <p className="text-slate-400 text-sm mb-4">{item.desc}</p>
 
             <div>
-              <h5 className="text-xs font-semibold text-[#666] mb-2">覆盖内容</h5>
+              <h5 className="text-xs font-semibold text-slate-400 mb-2">覆盖内容</h5>
               <div className="flex flex-wrap gap-2">
                 {item.coverages.map((tag, i) => (
-                  <span key={i} className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                  <span key={i} className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                     {tag}
                   </span>
                 ))}

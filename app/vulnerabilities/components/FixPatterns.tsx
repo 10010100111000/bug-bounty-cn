@@ -68,20 +68,20 @@ export default function FixPatterns() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">常见漏洞修复方案</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           理解漏洞的修复方法，能帮你写出更专业的报告，为安全团队提供可落地的修复建议。
         </p>
       </div>
 
       <div className="space-y-4">
         {fixGuides.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             <h4 className="text-lg font-bold mb-4">{item.vulnerability}</h4>
             <ul className="space-y-2">
               {item.fixes.map((fix, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-[#9FEF00] mt-1 flex-shrink-0">•</span>
-                  <span className="text-[#666]">{fix}</span>
+                  <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
+                  <span className="text-slate-400">{fix}</span>
                 </li>
               ))}
             </ul>

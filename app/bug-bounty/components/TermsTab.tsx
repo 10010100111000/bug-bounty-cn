@@ -322,7 +322,7 @@ export default function TermsTab() {
     <div>
       <div className="max-w-3xl mx-auto mb-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Bug Bounty 核心术语大全</h2>
-        <p className="text-[#666]">
+        <p className="text-slate-400">
           覆盖70+网安行业核心术语，从基础概念到高级漏洞类型，完整翻译+专业详解，新手也能轻松看懂
         </p>
       </div>
@@ -335,7 +335,7 @@ export default function TermsTab() {
             placeholder="搜索术语，比如 XSS、SQLi、IDOR..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-[#e5e5e5] focus:outline-none focus:border-[#9FEF00] focus:ring-2 focus:ring-[#9FEF00]/20"
+            className="w-full px-4 py-3 rounded-lg border border-slate-700/50 focus:outline-none focus:border-[#9FEF00] focus:ring-2 focus:ring-[#9FEF00]/20"
           />
         </div>
       </div>
@@ -343,14 +343,14 @@ export default function TermsTab() {
       {/* 术语网格 */}
       <div className="grid md:grid-cols-2 gap-4">
         {filteredTerms.map((item, index) => (
-          <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 transition-colors">
+          <div key={index} className="glass-panel p-5">
             <div className="flex flex-wrap items-center gap-3 mb-2">
               <h3 className="text-lg font-bold font-mono">{item.term}</h3>
-              <span className="text-sm font-medium bg-[#9FEF00]/10 text-[#5a7a00] px-2 py-0.5 rounded-full">
+              <span className="text-sm font-medium bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 px-2 py-0.5 rounded-full">
                 {item.translation}
               </span>
             </div>
-            <p className="text-sm text-[#666]">{item.desc}</p>
+            <p className="text-sm text-slate-400">{item.desc}</p>
           </div>
         ))}
       </div>

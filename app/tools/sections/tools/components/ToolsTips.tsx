@@ -35,9 +35,9 @@ export default function ToolsTips() {
 
       <div className="grid md:grid-cols-2 gap-4">
         {tips.map((tip, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <h4 className="text-lg font-bold mb-3">{tip.title}</h4>
-            <p className="text-[#666]">{tip.content}</p>
+            <p className="text-slate-400">{tip.content}</p>
           </div>
         ))}
       </div>

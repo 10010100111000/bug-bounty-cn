@@ -56,29 +56,29 @@ export default function RealWorldCases() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">漏洞真实利用案例</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           各类漏洞在真实场景中的利用事件、造成的影响，以及从中总结的经验教训
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
         {caseList.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             <div className="mb-3">
               <h4 className="text-lg font-bold">{item.vulnerability}</h4>
             </div>
 
             <div className="space-y-3">
               <div>
-                <h5 className="text-xs font-semibold text-[#666] mb-1">事件详情</h5>
+                <h5 className="text-xs font-semibold text-slate-400 mb-1">事件详情</h5>
                 <p className="text-sm">{item.event}</p>
               </div>
               <div>
-                <h5 className="text-xs font-semibold text-[#666] mb-1">受影响数据</h5>
+                <h5 className="text-xs font-semibold text-slate-400 mb-1">受影响数据</h5>
                 <p className="text-sm">{item.affectedData}</p>
               </div>
-              <div className="bg-[#9FEF00]/5 rounded-lg p-3 border border-[#9FEF00]/20">
-                <h5 className="text-xs font-semibold text-[#5a7a00] mb-1">经验教训</h5>
+              <div className="bg-cyan-500/10 rounded-lg p-3 border border-cyan-500/30">
+                <h5 className="text-xs font-semibold text-cyan-300 mb-1">经验教训</h5>
                 <p className="text-sm">{item.lesson}</p>
               </div>
             </div>

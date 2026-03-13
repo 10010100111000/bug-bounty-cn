@@ -81,22 +81,22 @@ export default function MethodologyComparison() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">全球主流方法论对比</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           有几种全球公认的渗透测试方法论。根据项目类型和需求选择合适的方法论。
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         {methodologies.map((method, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             <div className="mb-4">
               <h4 className="text-lg font-bold mb-1">{method.name}</h4>
-              <p className="text-sm text-[#666]">{method.fullName}</p>
+              <p className="text-sm text-slate-400">{method.fullName}</p>
               <div className="mt-2 flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-[#9FEF00]/10 text-[#5a7a00] rounded text-xs font-medium">
+                <span className="px-2 py-1 bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 rounded text-xs font-medium">
                   {method.focus}
                 </span>
-                <span className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                <span className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                   {method.coverage}
                 </span>
               </div>
@@ -108,8 +108,8 @@ export default function MethodologyComparison() {
                 <h5 className="text-sm font-bold text-green-700 mb-2">优势</h5>
                 <ul className="space-y-1">
                   {method.strengths.map((strength, i) => (
-                    <li key={i} className="text-sm text-[#666] flex items-start gap-2">
-                      <span className="text-green-500 mt-1 flex-shrink-0">+</span>
+                    <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1 flex-shrink-0">+</span>
                       {strength}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ export default function MethodologyComparison() {
                 <h5 className="text-sm font-bold text-red-700 mb-2">劣势</h5>
                 <ul className="space-y-1">
                   {method.weaknesses.map((weakness, i) => (
-                    <li key={i} className="text-sm text-[#666] flex items-start gap-2">
+                    <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
                       <span className="text-red-500 mt-1 flex-shrink-0">-</span>
                       {weakness}
                     </li>
@@ -130,8 +130,8 @@ export default function MethodologyComparison() {
               </div>
 
               {/* 适用场景 */}
-              <div className="bg-[#9FEF00]/5 rounded-lg p-3 border border-[#9FEF00]/20">
-                <h5 className="text-sm font-bold text-[#5a7a00] mb-1">最适合</h5>
+              <div className="bg-cyan-500/10 rounded-lg p-3 border border-cyan-500/30">
+                <h5 className="text-sm font-bold text-cyan-300 mb-1">最适合</h5>
                 <p className="text-sm">{method.bestFor}</p>
               </div>
             </div>

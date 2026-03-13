@@ -56,21 +56,21 @@ export default function TestingPhases() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">渗透测试各阶段对应漏洞</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           渗透测试的每个阶段，都会对应不同类型的漏洞。了解各阶段的目标、对应漏洞与常用工具，建立系统化的测试流程。
         </p>
       </div>
 
       <div className="space-y-4">
         {testingPhases.map((phase, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             <div className="flex items-start gap-4 mb-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9FEF00] text-[#111] font-bold flex items-center justify-center">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 font-bold flex items-center justify-center">
                 {phase.step}
               </div>
               <div>
                 <h4 className="text-xl font-bold mb-1">{phase.title}</h4>
-                <p className="text-[#666]">{phase.desc}</p>
+                <p className="text-slate-400">{phase.desc}</p>
               </div>
             </div>
 
@@ -80,7 +80,7 @@ export default function TestingPhases() {
                 <h5 className="text-sm font-semibold mb-2">目标漏洞</h5>
                 <div className="flex flex-wrap gap-2">
                   {phase.targetVulnerabilities.map((vuln, i) => (
-                    <span key={i} className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                    <span key={i} className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                       {vuln}
                     </span>
                   ))}
@@ -92,7 +92,7 @@ export default function TestingPhases() {
                 <h5 className="text-sm font-semibold mb-2">常用工具</h5>
                 <div className="flex flex-wrap gap-2">
                   {phase.tools.map((tool, i) => (
-                    <span key={i} className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                    <span key={i} className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                       {tool}
                     </span>
                   ))}
@@ -105,8 +105,8 @@ export default function TestingPhases() {
               <h5 className="text-sm font-semibold mb-2">实战技巧</h5>
               <ul className="space-y-1">
                 {phase.tips.map((tip, i) => (
-                  <li key={i} className="text-sm text-[#666] flex items-start gap-2">
-                    <span className="text-[#9FEF00] mt-1 flex-shrink-0">•</span>
+                  <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
+                    <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
                     {tip}
                   </li>
                 ))}

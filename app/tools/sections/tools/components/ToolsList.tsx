@@ -515,7 +515,7 @@ export default function ToolsList() {
   return (
     <div>
       {/* 搜索与筛选栏 */}
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-4 mb-8 sticky top-4 z-10">
+      <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-4 mb-8 sticky top-4 z-10">
         <div className="flex flex-col md:flex-row gap-4">
           {/* 搜索框 */}
           <div className="relative flex-grow">
@@ -525,7 +525,7 @@ export default function ToolsList() {
               placeholder="搜索工具名称、描述、分类..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9FEF00]/50"
+              className="w-full pl-10 pr-4 py-2 border border-slate-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9FEF00]/50"
             />
           </div>
 
@@ -535,8 +535,8 @@ export default function ToolsList() {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-[#9FEF00] text-[#111]'
-                  : 'bg-[#f5f5f5] text-[#666] hover:bg-[#f0f0f0]'
+                  ? 'bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100'
+                  : 'bg-slate-800/60 text-slate-400 hover:bg-[#f0f0f0]'
               }`}
             >
               全部
@@ -547,8 +547,8 @@ export default function ToolsList() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                   selectedCategory === category
-                    ? 'bg-[#9FEF00] text-[#111]'
-                    : 'bg-[#f5f5f5] text-[#666] hover:bg-[#f0f0f0]'
+                    ? 'bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100'
+                    : 'bg-slate-800/60 text-slate-400 hover:bg-[#f0f0f0]'
                 }`}
               >
                 {category}
@@ -558,8 +558,8 @@ export default function ToolsList() {
         </div>
 
         {/* 结果统计 */}
-        <div className="mt-3 text-sm text-[#666]">
-          共找到 <span className="font-bold text-[#111]">{filteredTools.length}</span> 个工具
+        <div className="mt-3 text-sm text-slate-400">
+          共找到 <span className="font-bold text-slate-100">{filteredTools.length}</span> 个工具
         </div>
       </div>
 
@@ -571,8 +571,8 @@ export default function ToolsList() {
 
         {/* 无结果提示 */}
         {filteredTools.length === 0 && (
-          <div className="text-center py-12 border border-dashed border-[#e5e5e5] rounded-lg">
-            <p className="text-[#666]">没有找到匹配的工具，请调整搜索关键词或筛选条件</p>
+          <div className="text-center py-12 border border-dashed border-slate-700/50 rounded-lg">
+            <p className="text-slate-400">没有找到匹配的工具，请调整搜索关键词或筛选条件</p>
           </div>
         )}
       </div>
@@ -593,13 +593,13 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
   ] as const;
 
   return (
-    <div className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+    <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
       {/* 工具头部，和原页面布局对齐 */}
       <div className="flex flex-wrap items-start justify-between gap-3 mb-6">
         <div className="text-right md:text-left order-2 md:order-1">
-          <p className="text-[#666] mb-1">{tool.shortDesc}</p>
+          <p className="text-slate-400 mb-1">{tool.shortDesc}</p>
           <div className="flex flex-wrap gap-2 justify-end md:justify-start">
-            <span className="px-2 py-0.5 rounded-full bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium">
+            <span className="px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium">
               {tool.category}
             </span>
             <span className="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-medium">
@@ -614,15 +614,15 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
       </div>
 
       {/* 标签栏，还原原页面的标签切换 */}
-      <div className="flex gap-1 mb-6 border-b border-[#e5e5e5]">
+      <div className="flex gap-1 mb-6 border-b border-slate-700/50">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-all ${
               activeTab === tab.id
-                ? 'border-b-2 border-[#9FEF00] text-[#111]'
-                : 'text-[#666] hover:text-[#111]'
+                ? 'border-b-2 border-[#9FEF00] text-slate-100'
+                : 'text-slate-400 hover:text-slate-100'
             }`}
           >
             {tab.label}
@@ -637,11 +637,11 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
           <div className="space-y-4">
             <div>
               <h5 className="text-sm font-bold mb-2">为什么使用它？</h5>
-              <p className="text-[#666]">{tool.usage.why}</p>
+              <p className="text-slate-400">{tool.usage.why}</p>
             </div>
             <div>
               <h5 className="text-sm font-bold mb-2">什么时候使用？</h5>
-              <p className="text-[#666]">{tool.usage.when}</p>
+              <p className="text-slate-400">{tool.usage.when}</p>
             </div>
           </div>
         )}
@@ -651,7 +651,7 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
           <div>
             <h5 className="text-sm font-bold mb-2">安装命令</h5>
             <div className="bg-[#1a1a1a] rounded-lg p-4 overflow-x-auto">
-              <code className="text-[#9FEF00] text-sm whitespace-pre-wrap break-all">
+              <code className="text-cyan-400 text-sm whitespace-pre-wrap break-all">
                 {tool.install}
               </code>
             </div>
@@ -665,7 +665,7 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
               <h5 className="text-sm font-bold mb-2">替代品</h5>
               <div className="flex flex-wrap gap-2">
                 {tool.alternatives.map((alt, i) => (
-                  <span key={i} className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                  <span key={i} className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                     {alt}
                   </span>
                 ))}
@@ -677,7 +677,7 @@ function ToolCard({ tool }: { tool: typeof toolsData[0] }) {
                 href={tool.officialSite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#5a7a00] font-medium hover:underline flex items-center gap-1"
+                className="text-cyan-300 font-medium hover:underline flex items-center gap-1"
               >
                 {tool.officialSite} <ExternalLink className="w-3 h-3" />
               </a>

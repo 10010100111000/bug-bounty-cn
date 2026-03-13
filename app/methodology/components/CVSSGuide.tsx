@@ -4,7 +4,7 @@ export default function CVSSGuide() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">CVSS评分快速指南</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           CVSS（通用漏洞评分系统）是评估漏洞严重程度的全球标准。以下是正确计算的方法。
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function CVSSGuide() {
       </div>
 
       {/* 风险等级 */}
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+      <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
         <h4 className="text-lg font-bold mb-4 text-center">风险等级划分</h4>
         <div className="grid grid-cols-4 gap-4">
           <div className="text-center p-3 rounded-lg bg-red-100 border border-red-200">
@@ -98,13 +98,13 @@ export default function CVSSGuide() {
 
 function CVSSCategory({ title, items }: { title: string; items: { value: string; desc: string }[] }) {
   return (
-    <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+    <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
       <h4 className="text-sm font-bold mb-3">{title}</h4>
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={i} className="text-sm">
             <span className="font-bold">{item.value}</span>
-            <span className="text-[#666] ml-2">— {item.desc}</span>
+            <span className="text-slate-400 ml-2">— {item.desc}</span>
           </li>
         ))}
       </ul>
