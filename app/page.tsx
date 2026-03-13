@@ -21,20 +21,20 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="bg-[#fafafa]">
+    <div className="text-slate-100">
       {/* ========== 1. 顶部英雄区（和原网站布局对齐） ========== */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             {/* 左边：代码终端图（和原网站一致） */}
             <div className="w-full md:w-1/2 order-2 md:order-1">
-              <div className="rounded-xl overflow-hidden border border-[#e5e5e5] shadow-sm">
+              <div className="rounded-xl overflow-hidden border border-white/20 shadow-sm">
                 {/* 终端顶部栏 */}
-                <div className="bg-slate-100 px-4 py-2 flex items-center gap-1.5 border-b border-[#e5e5e5]">
+                <div className="bg-white/10 backdrop-blur-md px-4 py-2 flex items-center gap-1.5 border-b border-white/20">
                   <div className="w-3 h-3 rounded-full bg-red-400"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                   <div className="w-3 h-3 rounded-full bg-[#9FEF00]"></div>
-                  <span className="ml-2 text-xs text-[#666]">bugbounty-cn.com</span>
+                  <span className="ml-2 text-xs text-slate-300">bugbounty-cn.com</span>
                 </div>
                 {/* 终端代码内容 */}
                 <div className="bg-slate-900 p-5 text-sm font-mono text-[#9FEF00] leading-relaxed">
@@ -50,15 +50,15 @@ export default function HomePage() {
                   <Code2 className="w-3 h-3 mr-1" />
                   实战教程
                 </div>
-                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-[#f5f5f5] text-[#666]">
+                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-white/10 text-slate-300">
                   <CheckCircle2 className="w-3 h-3 mr-1" />
                   100% 免费
                 </div>
-                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-[#f5f5f5] text-[#666]">
+                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-white/10 text-slate-300">
                   <Shield className="w-3 h-3 mr-1" />
                   14+ 漏洞详解
                 </div>
-                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-[#f5f5f5] text-[#666]">
+                <div className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-white/10 text-slate-300">
                   <BookOpen className="w-3 h-3 mr-1" />
                   完整学习路线
                 </div>
@@ -74,14 +74,14 @@ export default function HomePage() {
                 从零到专业<br />
                 漏洞赏金完整指南
               </h1>
-              <p className="text-[#666] text-lg mb-8 max-w-lg md:ml-auto">
+              <p className="text-slate-300 text-lg mb-8 max-w-lg md:ml-auto">
                 专为中文用户打造的Bug Bounty全栈学习平台，从零基础入门到拿下第一笔赏金，你需要的一切都在这里
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-end">
-                <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-[#111] hover:bg-[#8ed900] transition-colors">
+                <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-slate-100 hover:bg-[#8ed900] transition-colors">
                   立即开始学习
                 </a>
-                <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-[#e5e5e5] bg-white px-6 py-3 text-sm font-medium hover:border-[#9FEF00] transition-colors">
+                <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-xl px-6 py-3 text-sm font-medium hover:border-[#9FEF00] transition-colors">
                   查看漏洞库
                 </a>
               </div>
@@ -91,11 +91,11 @@ export default function HomePage() {
       </section>
 
       {/* ========== 2. 全内容一站式覆盖（原网站核心板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/10 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">你需要的一切，都在这里</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">从基础理论到实战技巧，覆盖Bug Bounty全流程的核心知识</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">从基础理论到实战技巧，覆盖Bug Bounty全流程的核心知识</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
@@ -131,10 +131,10 @@ export default function HomePage() {
                 desc: "国内外主流赏金平台的注册、规则、避坑技巧，帮你选对平台拿赏金"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/40 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-5 hover:border-[#9FEF00]/40 transition-colors">
                 <div className="mb-3 text-[#9FEF00]">{item.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-[#666]">{item.desc}</p>
+                <p className="text-sm text-slate-300">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">核心漏洞类型全覆盖</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">详细讲解Bug Bounty中最常见、赏金最高的各类安全漏洞</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">详细讲解Bug Bounty中最常见、赏金最高的各类安全漏洞</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -160,15 +160,15 @@ export default function HomePage() {
               { name: "文件上传漏洞", level: "高风险" },
               { name: "业务逻辑漏洞", level: "中高风险" }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/40 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-5 hover:border-[#9FEF00]/40 transition-colors">
                 <h3 className="font-semibold mb-1">{item.name}</h3>
-                <span className="text-xs text-[#666]">{item.level}</span>
+                <span className="text-xs text-slate-300">{item.level}</span>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-10">
-            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-[#111] hover:bg-[#8ed900] transition-colors">
+            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-slate-100 hover:bg-[#8ed900] transition-colors">
               查看完整漏洞库
             </a>
           </div>
@@ -176,11 +176,11 @@ export default function HomePage() {
       </section>
 
       {/* ========== 4. 4步起步指南（和原网站时间线对齐） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/10 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">4步起步指南</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">从零基础到获得第一个真实Bug Bounty赏金的清晰路径</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">从零基础到获得第一个真实Bug Bounty赏金的清晰路径</p>
           </div>
 
           <div className="space-y-4">
@@ -234,7 +234,7 @@ export default function HomePage() {
                 ]
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 flex flex-col md:flex-row gap-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-6 flex flex-col md:flex-row gap-6 hover:border-[#9FEF00]/30 transition-colors">
                 <div className="md:w-64 flex-shrink-0">
                   <div className="text-[#9FEF00] font-bold text-sm mb-1">{item.step} | {item.duration}</div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -260,7 +260,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">选择你的学习路径</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">无论你是零基础新手，还是有经验的研究者，都有适合你的内容</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">无论你是零基础新手，还是有经验的研究者，都有适合你的内容</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -287,7 +287,7 @@ export default function HomePage() {
               <div key={index} className={`rounded-lg border ${item.color} p-6`}>
                 <div className="text-sm font-semibold mb-2 opacity-70">{item.level}</div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-[#666] mb-6">{item.desc}</p>
+                <p className="text-slate-300 mb-6">{item.desc}</p>
                 <a href="/roadmap" className="text-sm font-semibold hover:underline">
                   查看详细路径 →
                 </a>
@@ -298,11 +298,11 @@ export default function HomePage() {
       </section>
 
       {/* ========== 6. 行业核心数据（原网站统计板块） ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/10 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">漏洞赏金行业核心数据</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">来自全球主流赏金平台的真实数据参考</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">来自全球主流赏金平台的真实数据参考</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -328,12 +328,12 @@ export default function HomePage() {
                 icon: <BarChart3 className="w-5 h-5" />
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 text-center hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-5 text-center hover:border-[#9FEF00]/30 transition-colors">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#9FEF00]/10 text-[#9FEF00] mb-3">
                   {item.icon}
                 </div>
                 <div className="text-2xl font-bold mb-2">{item.number}</div>
-                <p className="text-sm text-[#666]">{item.desc}</p>
+                <p className="text-sm text-slate-300">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -345,7 +345,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">漏洞赏金预期范围</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">根据漏洞严重程度和项目规模，行业通用的平均赏金范围参考</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">根据漏洞严重程度和项目规模，行业通用的平均赏金范围参考</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-4">
@@ -378,12 +378,12 @@ export default function HomePage() {
               <div key={index} className={`rounded-lg border ${item.color} p-6 text-center hover:shadow-sm transition-shadow`}>
                 <h3 className="font-semibold text-lg mb-2">{item.level}</h3>
                 <div className="text-2xl font-bold mb-2">{item.range}</div>
-                <p className="text-sm text-[#666]">{item.ratio}</p>
+                <p className="text-sm text-slate-300">{item.ratio}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-[#666] mt-8 max-w-3xl mx-auto text-sm">
+          <p className="text-center text-slate-300 mt-8 max-w-3xl mx-auto text-sm">
             注：以上为行业平均水平，Google、Apple等大型厂商的严重漏洞赏金最高可达10万美元以上。
             赏金的核心决定因素是漏洞的实际影响、可利用性和厂商的赏金政策。
           </p>
@@ -391,11 +391,11 @@ export default function HomePage() {
       </section>
 
       {/* ========== 8. 专业必备工具库 ========== */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/10 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">漏洞赏金必备工具</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">专业赏金猎人日常使用的核心工具，从侦察到漏洞利用全覆盖</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">专业赏金猎人日常使用的核心工具，从侦察到漏洞利用全覆盖</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -431,20 +431,20 @@ export default function HomePage() {
                 desc: "全球最流行的端口和服务扫描器，可探测目标开放端口、运行的服务和版本，是侦察必备工具"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-5 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-5 hover:border-[#9FEF00]/30 transition-colors">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-lg font-semibold">{item.name}</h3>
                   <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-[#9FEF00]/10 text-[#5a7a00]">
                     {item.tag}
                   </span>
                 </div>
-                <p className="text-sm text-[#666]">{item.desc}</p>
+                <p className="text-sm text-slate-300">{item.desc}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-10">
-            <a href="/tools" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-[#111] hover:bg-[#8ed900] transition-colors">
+            <a href="/tools" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-6 py-3 text-sm font-semibold text-slate-100 hover:bg-[#8ed900] transition-colors">
               查看完整工具库
             </a>
           </div>
@@ -456,7 +456,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">常见问题</h2>
-            <p className="text-[#666] max-w-2xl mx-auto">新手入门最常问的问题，一次性给你清晰的答案</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">新手入门最常问的问题，一次性给你清晰的答案</p>
           </div>
 
           <div className="space-y-4">
@@ -482,9 +482,9 @@ export default function HomePage() {
                 a: "完全不需要。一台普通的电脑、免费的Kali Linux系统，加上大量免费的开源工具和靶场，就足够你完成从入门到实战的全部学习，不用花一分钱就能开始。"
               }
             ].map((item, index) => (
-              <div key={index} className="rounded-lg border border-[#e5e5e5] bg-white p-6 hover:border-[#9FEF00]/30 transition-colors">
+              <div key={index} className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-xl p-6 hover:border-[#9FEF00]/30 transition-colors">
                 <h3 className="text-lg font-semibold mb-2">{item.q}</h3>
-                <p className="text-[#666]">{item.a}</p>
+                <p className="text-slate-300">{item.a}</p>
               </div>
             ))}
           </div>
@@ -499,10 +499,10 @@ export default function HomePage() {
             从零开始，一步步学习，拿下属于你的第一笔漏洞赏金
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-8 py-4 text-sm font-bold text-[#111] hover:bg-[#8ed900] transition-colors">
+            <a href="/roadmap" className="inline-flex items-center justify-center rounded-full bg-[#9FEF00] px-8 py-4 text-sm font-bold text-slate-100 hover:bg-[#8ed900] transition-colors">
               查看完整学习路线
             </a>
-            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors">
+            <a href="/vulnerabilities" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-bold text-white hover:bg-white/10 backdrop-blur-xl/10 transition-colors">
               学习漏洞知识
             </a>
           </div>

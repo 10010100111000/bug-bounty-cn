@@ -18,12 +18,12 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white border-b border-[#e5e5e5] shadow-sm">
+    <header className="sticky top-0 z-30 w-full bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-sm">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           {/* 左侧：Logo/站点名 */}
           <div className="flex items-center">
-            <Link href="/" className="text-lg font-bold text-[#111] hover:text-gray-700 transition-colors">
+            <Link href="/" className="text-lg font-bold text-slate-100 hover:text-white transition-colors">
               Bug Bounty 中文社区
             </Link>
           </div>
@@ -39,7 +39,7 @@ export default function Navbar() {
                   className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
                     isActive
                       ? 'text-[#5a7a00] bg-[#9FEF00]/10'
-                      : 'text-[#666] hover:text-[#111] hover:bg-[#f5f5f5]'
+                      : 'text-slate-300 hover:text-slate-100 hover:bg-white/10'
                   }`}
                 >
                   {link.label}
