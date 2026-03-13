@@ -48,14 +48,14 @@ export default function ReportsPage() {
   ];
 
   return (
-    <div className="bg-[#fafafa] min-h-screen pb-20">
+    <div className="bg-slate-900/20 min-h-screen pb-20">
       {/* 页面顶部标题 */}
-      <div className="bg-white py-12 md:py-16 border-b border-[#e5e5e5]">
+      <div className="bg-slate-900/40 backdrop-blur-md py-12 md:py-16 border-b border-slate-700/50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Bug Bounty 报告写作指南
           </h1>
-          <p className="text-[#666] text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             写出高通过率、高赏金的专业漏洞报告，包含完整结构、避坑指南、模板示例、评分标准和沟通技巧
           </p>
         </div>

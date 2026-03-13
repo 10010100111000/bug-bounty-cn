@@ -34,10 +34,10 @@ export default function CVSSGuidePage() {
       {/* 页面顶部简介，和原页面开头对齐 */}
       <div className="mb-6">
         <h2 className="text-xl font-bold mb-2">CVSS评分指南</h2>
-        <p className="text-[#666] leading-relaxed">
+        <p className="text-slate-400 leading-relaxed">
           CVSS（通用漏洞评分系统）是全球公认的漏洞严重程度分类标准，准确的CVSS评分是专业漏洞报告的重要组成部分，能帮助厂商正确评估漏洞优先级，也能体现你的专业性。
         </p>
-        <div className="mt-4 bg-[#fafafa] rounded-lg p-4">
+        <div className="mt-4 bg-slate-900/20 rounded-lg p-4">
           <h4 className="font-bold mb-2">CVSS评分等级划分</h4>
           <ul className="grid md:grid-cols-5 gap-2 text-sm">
             <li className="bg-red-100 text-red-800 p-2 rounded text-center">
@@ -56,7 +56,7 @@ export default function CVSSGuidePage() {
               <span className="font-bold block">0.1-3.9</span>
               Low 低危
             </li>
-            <li className="bg-gray-100 text-gray-800 p-2 rounded text-center">
+            <li className="bg-slate-800/60 text-slate-200 p-2 rounded text-center">
               <span className="font-bold block">0.0</span>
               None 无危
             </li>
@@ -151,30 +151,30 @@ function CVSSMetricsContent() {
 
   return (
     <div className="space-y-5">
-      <p className="text-[#666] mb-3">
+      <p className="text-slate-400 mb-3">
         CVSS 3.1的基础评分由8个核心指标组成，每个指标的选择直接决定了漏洞的最终评分。
       </p>
 
       {metricsList.map((metric, idx) => (
-        <div key={idx} className="bg-[#fafafa] rounded-lg p-4 border border-[#eee]">
+        <div key={idx} className="bg-slate-900/20 rounded-lg p-4 border border-[#eee]">
           <h4 className="font-bold text-lg mb-2">{metric.name}</h4>
-          <p className="text-[#666] mb-3">{metric.desc}</p>
+          <p className="text-slate-400 mb-3">{metric.desc}</p>
           <div className="space-y-2 pl-2">
             {metric.options.map((opt, i) => (
-              <div key={i} className="bg-white rounded p-3 border border-[#eee]">
+              <div key={i} className="bg-slate-900/40 backdrop-blur-md rounded p-3 border border-[#eee]">
                 <p className="font-medium mb-1">{opt.label}</p>
-                <p className="text-sm text-[#666]">{opt.desc}</p>
+                <p className="text-sm text-slate-400">{opt.desc}</p>
               </div>
             ))}
           </div>
         </div>
       ))}
 
-      <div className="bg-[#9FEF00]/10 rounded-lg p-4 mt-4">
+      <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4 mt-4">
         <h5 className="font-bold mb-2">CVSS向量字符串格式</h5>
-        <p className="text-[#666] mb-2">8个指标的选择结果会生成标准的向量字符串，是报告里必须包含的内容，格式如下：</p>
+        <p className="text-slate-400 mb-2">8个指标的选择结果会生成标准的向量字符串，是报告里必须包含的内容，格式如下：</p>
         <div className="bg-[#1a1a1a] rounded p-3">
-          <code className="text-[#9FEF00] text-sm">
+          <code className="text-cyan-400 text-sm">
             CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
           </code>
         </div>
@@ -244,14 +244,14 @@ function CVSSCommonScoresContent() {
 
   return (
     <div className="space-y-4">
-      <p className="text-[#666] mb-3">
+      <p className="text-slate-400 mb-3">
         以下是赏金报告中最常见的漏洞类型的参考评分，实际分数请以漏洞的具体场景为准，建议使用官方计算器计算准确分数。
       </p>
 
-      <div className="overflow-x-auto bg-white rounded-lg border border-[#eee]">
+      <div className="overflow-x-auto bg-slate-900/40 backdrop-blur-md rounded-lg border border-[#eee]">
         <table className="w-full min-w-full">
           <thead>
-            <tr className="border-b border-[#eee] bg-[#fafafa]">
+            <tr className="border-b border-[#eee] bg-slate-900/20">
               <th className="text-left py-3 px-4 font-bold text-[#333]">漏洞类型</th>
               <th className="text-center py-3 px-4 font-bold text-[#333]">分数</th>
               <th className="text-center py-3 px-4 font-bold text-[#333]">危险等级</th>
@@ -260,7 +260,7 @@ function CVSSCommonScoresContent() {
           </thead>
           <tbody className="divide-y divide-[#eee]">
             {scoreList.map((item, idx) => (
-              <tr key={idx} className="hover:bg-[#fafafa]">
+              <tr key={idx} className="hover:bg-slate-900/20">
                 <td className="text-left py-3 px-4 font-medium">{item.type}</td>
                 <td className="text-center py-3 px-4">{item.score}</td>
                 <td className="text-center py-3 px-4">
@@ -268,12 +268,12 @@ function CVSSCommonScoresContent() {
                     item.severity === 'Critical' ? 'bg-red-100 text-red-700' :
                     item.severity === 'High' ? 'bg-orange-100 text-orange-700' :
                     item.severity === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
-                    'bg-gray-100 text-gray-700'
+                    'bg-slate-800/60 text-gray-700'
                   }`}>
                     {item.severity}
                   </span>
                 </td>
-                <td className="text-left py-3 px-4 font-mono text-sm text-[#666] break-all">{item.vector}</td>
+                <td className="text-left py-3 px-4 font-mono text-sm text-slate-400 break-all">{item.vector}</td>
               </tr>
             ))}
           </tbody>
@@ -322,27 +322,27 @@ function CVSSExamplesContent() {
 
   return (
     <div className="space-y-6">
-      <p className="text-[#666] mb-3">
+      <p className="text-slate-400 mb-3">
         以下是两个最常见漏洞的完整评分过程示例，帮助你理解如何给你的漏洞打分。
       </p>
 
       {examples.map((example, idx) => (
-        <div key={idx} className="bg-white rounded-lg border border-[#eee] p-5">
+        <div key={idx} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-[#eee] p-5">
           <h4 className="font-bold text-lg mb-2">{example.title}</h4>
-          <p className="text-[#666] mb-4">{example.desc}</p>
+          <p className="text-slate-400 mb-4">{example.desc}</p>
           
           <div className="grid md:grid-cols-2 gap-3 mb-6">
             {example.metrics.map((m, i) => (
-              <div key={i} className="bg-[#fafafa] rounded-lg p-3 flex justify-between items-center">
-                <span className="text-sm text-[#666]">{m.desc}</span>
+              <div key={i} className="bg-slate-900/20 rounded-lg p-3 flex justify-between items-center">
+                <span className="text-sm text-slate-400">{m.desc}</span>
                 <span className="font-medium">{m.key}: {m.value}</span>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#9FEF00]/10 rounded-lg p-4">
+          <div className="bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] rounded-lg p-4">
             <p className="font-mono text-sm mb-2 break-all">{example.vector}</p>
-            <p className="font-bold text-lg text-[#5a7a00]">最终评分：{example.finalScore}</p>
+            <p className="font-bold text-lg text-cyan-300">最终评分：{example.finalScore}</p>
           </div>
         </div>
       ))}
@@ -356,15 +356,15 @@ function CVSSCalculatorContent() {
     <div className="space-y-4">
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="font-bold mb-2">官方权威计算器地址</h4>
-        <div className="bg-[#fafafa] rounded-lg p-4">
-          <p className="text-[#666] mb-2">
+        <div className="bg-slate-900/20 rounded-lg p-4">
+          <p className="text-slate-400 mb-2">
             First.org 官方CVSS 3.1计算器（全球通用，最权威）：
           </p>
           <a 
             href="https://www.first.org/cvss/calculator/3.1" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[#5a7a00] font-bold font-mono"
+            className="text-cyan-300 font-bold font-mono"
           >
             https://www.first.org/cvss/calculator/3.1
           </a>
@@ -373,7 +373,7 @@ function CVSSCalculatorContent() {
 
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="font-bold mb-2">使用步骤</h4>
-        <ol className="list-decimal list-inside space-y-2 text-[#666] pl-2">
+        <ol className="list-decimal list-inside space-y-2 text-slate-400 pl-2">
           <li className="leading-relaxed">打开官方计算器，确认是CVSS 3.1版本</li>
           <li className="leading-relaxed">根据你的漏洞实际场景，在「Base Score Metrics」区域，依次选择8个指标对应的选项</li>
           <li className="leading-relaxed">选择完成后，页面会自动计算出最终的分数、危险等级</li>
@@ -384,10 +384,10 @@ function CVSSCalculatorContent() {
 
       <div className="border-l-4 border-[#9FEF00] pl-4">
         <h4 className="font-bold mb-2">报告里的标准写法</h4>
-        <div className="bg-[#fafafa] rounded-lg p-4">
-          <div className="bg-white border border-[#eee] rounded p-3">
+        <div className="bg-slate-900/20 rounded-lg p-4">
+          <div className="bg-slate-900/40 backdrop-blur-md border border-[#eee] rounded p-3">
             <p className="font-medium">CVSS 3.1 Score: 8.2 (High)</p>
-            <p className="text-[#666] font-mono text-sm mt-1">
+            <p className="text-slate-400 font-mono text-sm mt-1">
               Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N
             </p>
           </div>

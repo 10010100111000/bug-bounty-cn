@@ -634,7 +634,7 @@ export default function DetailedPhases() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">14个专业方法论阶段</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           每个阶段都包含任务、工具、命令、技巧和常见错误。按顺序执行，但在各阶段之间保持灵活性。
         </p>
       </div>
@@ -663,34 +663,34 @@ function PhaseCard({ phase }: { phase: Phase }) {
   ] as const;
 
   return (
-    <div className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+    <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
       {/* 阶段头部 */}
       <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <span className="px-3 py-1 rounded-full bg-[#9FEF00] text-[#111] text-lg font-bold">
+            <span className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 text-lg font-bold">
               {phase.step}
             </span>
             <h4 className="text-xl font-bold">{phase.title}</h4>
           </div>
-          <p className="text-[#666] max-w-3xl">{phase.desc}</p>
+          <p className="text-slate-400 max-w-3xl">{phase.desc}</p>
         </div>
         <div className="flex flex-col gap-1 text-right">
-          <span className="text-sm font-medium text-[#666]">{phase.time}</span>
-          <span className="text-sm font-medium text-[#666]">{phase.difficulty}</span>
+          <span className="text-sm font-medium text-slate-400">{phase.time}</span>
+          <span className="text-sm font-medium text-slate-400">{phase.difficulty}</span>
         </div>
       </div>
 
       {/* 标签栏 */}
-      <div className="flex flex-wrap gap-1 mb-6 border-b border-[#e5e5e5]">
+      <div className="flex flex-wrap gap-1 mb-6 border-b border-slate-700/50">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-all ${
               activeTab === tab.id
-                ? 'border-b-2 border-[#9FEF00] text-[#111]'
-                : 'text-[#666] hover:text-[#111]'
+                ? 'border-b-2 border-[#9FEF00] text-slate-100'
+                : 'text-slate-400 hover:text-slate-100'
             }`}
           >
             {tab.label}
@@ -704,8 +704,8 @@ function PhaseCard({ phase }: { phase: Phase }) {
         {activeTab === 'tasks' && (
           <div className="grid md:grid-cols-2 gap-3">
             {phase.tasks.map((task, i) => (
-              <div key={i} className="flex items-start gap-2 p-3 rounded-lg bg-[#fafafa] border border-[#f0f0f0]">
-                <span className="text-[#9FEF00] mt-0.5 flex-shrink-0">✓</span>
+              <div key={i} className="flex items-start gap-2 p-3 rounded-lg bg-slate-900/20 border border-[#f0f0f0]">
+                <span className="text-cyan-400 mt-0.5 flex-shrink-0">✓</span>
                 <span className="text-sm">{task}</span>
               </div>
             ))}
@@ -716,7 +716,7 @@ function PhaseCard({ phase }: { phase: Phase }) {
         {activeTab === 'tools' && (
           <div className="flex flex-wrap gap-2">
             {phase.tools.map((tool, i) => (
-              <span key={i} className="px-3 py-2 bg-[#f5f5f5] rounded-lg text-sm font-medium">
+              <span key={i} className="px-3 py-2 bg-slate-800/60 rounded-lg text-sm font-medium">
                 {tool}
               </span>
             ))}
@@ -727,11 +727,11 @@ function PhaseCard({ phase }: { phase: Phase }) {
         {activeTab === 'commands' && (
           <div className="space-y-3">
             {phase.commands.length === 0 ? (
-              <p className="text-[#666]">该阶段无常用命令</p>
+              <p className="text-slate-400">该阶段无常用命令</p>
             ) : (
               phase.commands.map((cmd, i) => (
                 <div key={i} className="bg-[#1a1a1a] rounded-lg p-4 overflow-x-auto">
-                  <code className="text-[#9FEF00] text-sm whitespace-pre-wrap break-all">
+                  <code className="text-cyan-400 text-sm whitespace-pre-wrap break-all">
                     {cmd}
                   </code>
                 </div>
@@ -744,8 +744,8 @@ function PhaseCard({ phase }: { phase: Phase }) {
         {activeTab === 'tips' && (
           <ul className="space-y-2">
             {phase.tips.map((tip, i) => (
-              <li key={i} className="flex items-start gap-2 p-3 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/10">
-                <span className="text-[#5a7a00] mt-0.5 flex-shrink-0 font-bold">💡</span>
+              <li key={i} className="flex items-start gap-2 p-3 rounded-lg bg-cyan-500/10 border border-[#9FEF00]/10">
+                <span className="text-cyan-300 mt-0.5 flex-shrink-0 font-bold">💡</span>
                 <span className="text-[#333]">{tip}</span>
               </li>
             ))}

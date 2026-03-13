@@ -25,12 +25,12 @@ export default function FinalChecklist() {
         <h3 className="text-xl md:text-2xl font-bold mb-2">提交报告前的最终检查清单</h3>
       </div>
 
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-8">
+      <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-8">
         <ul className="space-y-3">
           {checklistItems.map((item, index) => (
             <li key={index} className="flex items-start gap-3">
-              <span className="text-[#9FEF00] mt-1 flex-shrink-0 text-xl">□</span>
-              <span className="text-[#666]">{item}</span>
+              <span className="text-cyan-400 mt-1 flex-shrink-0 text-xl">□</span>
+              <span className="text-slate-400">{item}</span>
             </li>
           ))}
         </ul>

@@ -11,11 +11,11 @@ export default function ReportExamples() {
       id: 'xss-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">Stored XSS in Product Reviews via Title Field [HIGH]</span>
+          <span className="font-medium text-slate-100">Stored XSS in Product Reviews via Title Field [HIGH]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$750</span>
-            <span className="text-[#666]">HackerOne</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">Stored XSS</span>
+            <span className="text-slate-400">HackerOne</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">Stored XSS</span>
           </div>
         </div>
       ),
@@ -25,11 +25,11 @@ export default function ReportExamples() {
       id: 'idor-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">IDOR - Access to Any User's Private Documents via API [CRITICAL]</span>
+          <span className="font-medium text-slate-100">IDOR - Access to Any User's Private Documents via API [CRITICAL]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$2,500</span>
-            <span className="text-[#666]">Bugcrowd</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">IDOR</span>
+            <span className="text-slate-400">Bugcrowd</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">IDOR</span>
           </div>
         </div>
       ),
@@ -39,11 +39,11 @@ export default function ReportExamples() {
       id: 'ssrf-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">SSRF via Profile Picture URL Allows Internal Network Scanning [HIGH]</span>
+          <span className="font-medium text-slate-100">SSRF via Profile Picture URL Allows Internal Network Scanning [HIGH]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$1,500</span>
-            <span className="text-[#666]">HackerOne</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">SSRF</span>
+            <span className="text-slate-400">HackerOne</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">SSRF</span>
           </div>
         </div>
       ),
@@ -53,11 +53,11 @@ export default function ReportExamples() {
       id: 'sqli-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">SQL Injection in Search Functionality - Database Dump Possible [CRITICAL]</span>
+          <span className="font-medium text-slate-100">SQL Injection in Search Functionality - Database Dump Possible [CRITICAL]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$5,000</span>
-            <span className="text-[#666]">HackerOne</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">SQL Injection</span>
+            <span className="text-slate-400">HackerOne</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">SQL Injection</span>
           </div>
         </div>
       ),
@@ -67,11 +67,11 @@ export default function ReportExamples() {
       id: 'csrf-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">CSRF on Email Change Enables Account Takeover Chain [MEDIUM]</span>
+          <span className="font-medium text-slate-100">CSRF on Email Change Enables Account Takeover Chain [MEDIUM]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$500</span>
-            <span className="text-[#666]">Bugcrowd</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">CSRF</span>
+            <span className="text-slate-400">Bugcrowd</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">CSRF</span>
           </div>
         </div>
       ),
@@ -81,11 +81,11 @@ export default function ReportExamples() {
       id: 'jwt-bypass-real-case',
       title: (
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
-          <span className="font-medium text-[#111]">Authentication Bypass via JWT None Algorithm [CRITICAL]</span>
+          <span className="font-medium text-slate-100">Authentication Bypass via JWT None Algorithm [CRITICAL]</span>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <span className="text-green-600 font-bold">$3,000</span>
-            <span className="text-[#666]">HackerOne</span>
-            <span className="bg-gray-100 px-2 py-0.5 rounded text-[#666]">Auth Bypass</span>
+            <span className="text-slate-400">HackerOne</span>
+            <span className="bg-slate-800/60 px-2 py-0.5 rounded text-slate-400">Auth Bypass</span>
           </div>
         </div>
       ),
@@ -97,7 +97,7 @@ export default function ReportExamples() {
     <div>
       <div className="mb-6">
         <h2 className="text-xl font-bold mb-2">真实赏金报告完整案例</h2>
-        <p className="text-[#666]">
+        <p className="text-slate-400">
           来自HackerOne、Bugcrowd等主流赏金平台的真实公开报告，完全保留原报告的专业结构，同时提供完整中文翻译，方便对照学习。
         </p>
       </div>
@@ -112,7 +112,7 @@ export default function ReportExamples() {
 
 // 通用的报告内容容器样式，完全对齐原页面的浅灰色背景、干净排版
 const ReportContainer = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-[#eeeef0] rounded-lg p-6 font-mono text-sm leading-relaxed text-[#111] whitespace-pre-wrap">
+  <div className="bg-[#eeeef0] rounded-lg p-6 font-mono text-sm leading-relaxed text-slate-100 whitespace-pre-wrap">
     {children}
   </div>
 );

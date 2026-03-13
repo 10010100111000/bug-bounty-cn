@@ -36,7 +36,7 @@ export default function RiskMatrix() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">风险等级对比矩阵</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           不同风险等级的划分标准、对应漏洞、修复响应时间与赏金等级
         </p>
       </div>
@@ -50,7 +50,7 @@ export default function RiskMatrix() {
             "中": "border-yellow-200 bg-yellow-50",
             "低": "border-blue-200 bg-blue-50",
           };
-          const bgClass = colorConfig[item.level as keyof typeof colorConfig] || "border-gray-200 bg-white";
+          const bgClass = colorConfig[item.level as keyof typeof colorConfig] || "border-slate-700/50 bg-slate-900/40 backdrop-blur-md";
 
           return (
             <div key={index} className={`rounded-lg border ${bgClass} p-6`}>
@@ -59,7 +59,7 @@ export default function RiskMatrix() {
                 <div className="md:col-span-1">
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold mb-1">{item.level}</span>
-                    <span className="text-sm font-medium text-[#666]">CVSS: {item.cvss}</span>
+                    <span className="text-sm font-medium text-slate-400">CVSS: {item.cvss}</span>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@ export default function RiskMatrix() {
                   <h4 className="text-sm font-semibold mb-2">漏洞示例</h4>
                   <div className="flex flex-wrap gap-2">
                     {item.examples.map((example, i) => (
-                      <span key={i} className="px-2 py-1 bg-white rounded text-xs font-medium">
+                      <span key={i} className="px-2 py-1 bg-slate-900/40 backdrop-blur-md rounded text-xs font-medium">
                         {example}
                       </span>
                     ))}

@@ -5,7 +5,7 @@ export default function ScopeTab() {
     <div className="space-y-8">
       <div className="max-w-3xl mx-auto mb-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">项目范围分析专业指南</h2>
-        <p className="text-[#666]">
+        <p className="text-slate-400">
           范围分析是你开始测试前的第一步，也是最关键的一步。错误的范围分析会导致你浪费大量时间、甚至面临法律风险和账号封禁。遵循以下6个步骤，完成专业的项目分析。
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function ScopeTab() {
         ].map((item, index) => (
           <div key={index} className={`rounded-lg border ${item.color} p-6`}>
             <div className="flex flex-wrap items-center gap-3 mb-3">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9FEF00] text-[#111] font-bold flex items-center justify-center">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 font-bold flex items-center justify-center">
                 {item.step}
               </div>
               <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${item.priorityColor}`}>
@@ -71,17 +71,17 @@ export default function ScopeTab() {
               </span>
               <h3 className="text-lg font-semibold">{item.title}</h3>
             </div>
-            <p className="text-[#666]">{item.desc}</p>
+            <p className="text-slate-400">{item.desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 p-6 rounded-lg bg-[#9FEF00]/5 border border-[#9FEF00]/20 max-w-4xl mx-auto">
+      <div className="mt-12 p-6 rounded-lg bg-cyan-500/10 border border-cyan-500/30 max-w-4xl mx-auto">
         <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-          <AlertTriangle className="w-5 h-5 text-[#9FEF00]" />
+          <AlertTriangle className="w-5 h-5 text-cyan-400" />
           范围分析的核心原则
         </h3>
-        <p className="text-[#666]">
+        <p className="text-slate-400">
           永远记住：<strong>不在范围内的目标，哪怕有再严重的漏洞，也绝对不要去测试</strong>。超出范围的测试不仅不会给你带来赏金，还会导致你被平台封禁，甚至面临法律诉讼。安全研究的第一准则，永远是合规和授权。
         </p>
       </div>

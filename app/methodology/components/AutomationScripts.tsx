@@ -81,7 +81,7 @@ export default function AutomationScripts() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">自动化脚本</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           自动化处理重复性任务可以节省大量时间并减少错误。使用这些脚本作为起点，根据你的需求进行定制。
         </p>
       </div>
@@ -135,10 +135,10 @@ function SimpleScriptCard({ title, desc, steps, script }: {
   script: string; 
 }) {
   return (
-    <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+    <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
       <div className="mb-6">
         <h4 className="text-xl font-bold mb-2">{title}</h4>
-        <p className="text-[#666]">{desc}</p>
+        <p className="text-slate-400">{desc}</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -146,8 +146,8 @@ function SimpleScriptCard({ title, desc, steps, script }: {
           <h5 className="text-sm font-bold mb-3">执行步骤</h5>
           <ol className="space-y-2">
             {steps.map((step, i) => (
-              <li key={i} className="text-sm text-[#666] flex items-start gap-2">
-                <span className="text-[#9FEF00] mt-0.5 flex-shrink-0 font-bold">{i + 1}</span>
+              <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
+                <span className="text-cyan-400 mt-0.5 flex-shrink-0 font-bold">{i + 1}</span>
                 {step}
               </li>
             ))}
@@ -157,7 +157,7 @@ function SimpleScriptCard({ title, desc, steps, script }: {
         <div>
           <h5 className="text-sm font-bold mb-2">Shell脚本</h5>
           <div className="bg-[#1a1a1a] rounded-lg p-4 overflow-x-auto">
-            <pre className="text-[#9FEF00] text-xs whitespace-pre-wrap break-all">
+            <pre className="text-cyan-400 text-xs whitespace-pre-wrap break-all">
               {script}
             </pre>
           </div>

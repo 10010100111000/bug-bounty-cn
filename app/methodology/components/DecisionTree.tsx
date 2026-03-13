@@ -4,14 +4,14 @@ export default function DecisionTree() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">从哪里开始？</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           使用这个决策树，根据你当前的情况，确定最佳的测试起点。
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {/* 第一列：目标类型 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4 text-center">你的目标是什么类型？</h4>
           <div className="space-y-3">
             {[
@@ -32,16 +32,16 @@ export default function DecisionTree() {
                 path: "从资产发现开始 → 配置错误扫描 → 权限提升"
               }
             ].map((item, index) => (
-              <div key={index} className="p-3 rounded-lg bg-[#fafafa] border border-[#e5e5e5]">
+              <div key={index} className="p-3 rounded-lg bg-slate-900/20 border border-slate-700/50">
                 <h5 className="font-bold mb-1">{item.type}</h5>
-                <p className="text-sm text-[#666]">{item.path}</p>
+                <p className="text-sm text-slate-400">{item.path}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* 第二列：经验水平 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4 text-center">你的经验水平如何？</h4>
           <div className="space-y-3">
             {[
@@ -58,16 +58,16 @@ export default function DecisionTree() {
                 focus: "专注于竞争条件、反序列化和攻击链。寻找0day漏洞。"
               }
             ].map((item, index) => (
-              <div key={index} className="p-3 rounded-lg bg-[#fafafa] border border-[#e5e5e5]">
+              <div key={index} className="p-3 rounded-lg bg-slate-900/20 border border-slate-700/50">
                 <h5 className="font-bold mb-1">{item.level}</h5>
-                <p className="text-sm text-[#666]">{item.focus}</p>
+                <p className="text-sm text-slate-400">{item.focus}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* 第三列：项目类型 */}
-        <div className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+        <div className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
           <h4 className="text-lg font-bold mb-4 text-center">这是什么类型的Bug Bounty项目？</h4>
           <div className="space-y-3">
             {[
@@ -84,9 +84,9 @@ export default function DecisionTree() {
                 advice: "黄金机会 — 竞争小得多。花更多时间在深度信息收集上。"
               }
             ].map((item, index) => (
-              <div key={index} className="p-3 rounded-lg bg-[#fafafa] border border-[#e5e5e5]">
+              <div key={index} className="p-3 rounded-lg bg-slate-900/20 border border-slate-700/50">
                 <h5 className="font-bold mb-1">{item.program}</h5>
-                <p className="text-sm text-[#666]">{item.advice}</p>
+                <p className="text-sm text-slate-400">{item.advice}</p>
               </div>
             ))}
           </div>

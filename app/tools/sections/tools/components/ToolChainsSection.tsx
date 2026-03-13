@@ -283,18 +283,18 @@ export default function ToolChainsSection() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">工具链实战指南 (Tool Chains)</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           如何把零散的工具串联成完整的自动化工作流，覆盖从信息收集到漏洞检测的全流程。
         </p>
       </div>
 
       <div className="space-y-8">
         {toolChainsData.map((chain) => (
-          <div key={chain.id} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={chain.id} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             {/* 工具链头部 */}
             <div className="flex flex-wrap items-start justify-between gap-3 mb-8">
               <div className="text-right md:text-left order-2 md:order-1">
-                <p className="text-[#666]">{chain.desc}</p>
+                <p className="text-slate-400">{chain.desc}</p>
               </div>
               <div className="flex items-center gap-2 order-1 md:order-2">
                 <h4 className="text-xl font-bold">{chain.title}</h4>
@@ -310,7 +310,7 @@ export default function ToolChainsSection() {
                   <div className="absolute top-0 right-0 flex flex-wrap items-center gap-2">
                     <div className="flex flex-wrap gap-2">
                       {step.tools.map((tool) => (
-                        <span key={tool} className="px-3 py-1 bg-[#f5f5f5] rounded-full text-xs font-medium">
+                        <span key={tool} className="px-3 py-1 bg-slate-800/60 rounded-full text-xs font-medium">
                           {tool}
                         </span>
                       ))}
@@ -323,10 +323,10 @@ export default function ToolChainsSection() {
                   {/* 步骤标题和说明 */}
                   <div className="mb-3 pt-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <ArrowRight className="w-4 h-4 text-[#666] flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
                       <h5 className="text-lg font-bold">{step.title}</h5>
                     </div>
-                    <p className="text-sm text-[#666] ml-6">{step.desc}</p>
+                    <p className="text-sm text-slate-400 ml-6">{step.desc}</p>
                   </div>
 
                   {/* 命令代码块 */}

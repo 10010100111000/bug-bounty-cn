@@ -22,7 +22,7 @@ const categoryConfig: CategoryConfig = {
   "数据注入类": { color: "bg-purple-100 text-purple-700" },
   "请求伪造类": { color: "bg-orange-100 text-orange-700" },
   "业务逻辑类": { color: "bg-indigo-100 text-indigo-700" },
-  "安全配置类": { color: "bg-gray-100 text-gray-700" },
+  "安全配置类": { color: "bg-slate-800/60 text-gray-700" },
   "信息泄露类": { color: "bg-teal-100 text-teal-700" },
   "文件上传类": { color: "bg-pink-100 text-pink-700" },
   "API安全类": { color: "bg-cyan-100 text-cyan-700" },
@@ -278,7 +278,7 @@ export default function CommonVulnerabilities() {
         {vulnerabilitiesList.map((vuln, index) => (
           <div 
             key={index} 
-            className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:border-[#9FEF00]/30 hover:shadow-sm transition-all"
+            className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:border-cyan-400/40 hover:shadow-sm transition-all"
           >
             {/* 头部：漏洞名称、标签 */}
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
@@ -292,19 +292,19 @@ export default function CommonVulnerabilities() {
                     {vuln.category}
                   </span>
                 </div>
-                <p className="text-[#666] font-medium">{vuln.fullName}</p>
+                <p className="text-slate-400 font-medium">{vuln.fullName}</p>
               </div>
             </div>
 
             {/* 漏洞定义 */}
             <div className="mb-3">
-              <h4 className="text-sm font-semibold text-[#666] mb-1">漏洞定义</h4>
+              <h4 className="text-sm font-semibold text-slate-400 mb-1">漏洞定义</h4>
               <p className="text-[#333]">{vuln.definition}</p>
             </div>
 
             {/* 通俗解释 */}
-            <div className="bg-[#9FEF00]/5 rounded-lg p-4 border border-[#9FEF00]/20">
-              <h4 className="text-sm font-semibold text-[#5a7a00] mb-1">通俗解释</h4>
+            <div className="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/30">
+              <h4 className="text-sm font-semibold text-cyan-300 mb-1">通俗解释</h4>
               <p className="text-[#333]">{vuln.simpleDesc}</p>
             </div>
           </div>

@@ -27,11 +27,11 @@ export default function ToolsPage() {
   const [activeTab, setActiveTab] = useState<TabType>('tools');
 
   return (
-    <div className="bg-[#fafafa] min-h-screen pb-20">
+    <div className="bg-slate-900/20 min-h-screen pb-20">
       {/* ✅ 删掉了原来重复的全局大标题 */}
 
       {/* 核心：顶部标签切换栏 */}
-      <div className="sticky top-0 z-20 bg-white border-b border-[#e5e5e5] shadow-sm">
+      <div className="sticky top-0 z-20 bg-slate-900/40 backdrop-blur-md border-b border-slate-700/50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-1 py-3 overflow-x-auto">
             {tabs.map((tab) => (
@@ -40,8 +40,8 @@ export default function ToolsPage() {
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`px-5 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'bg-[#9FEF00] text-[#111]'
-                    : 'bg-[#f5f5f5] text-[#666] hover:bg-[#f0f0f0]'
+                    ? 'bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100'
+                    : 'bg-slate-800/60 text-slate-400 hover:bg-[#f0f0f0]'
                 }`}
               >
                 {tab.label}

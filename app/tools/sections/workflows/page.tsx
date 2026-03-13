@@ -40,17 +40,17 @@ export default function WorkflowsSection() {
     <div>
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Workflows</h2>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           标准化的测试工作流，帮助你系统化地进行测试，避免遗漏。
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {workflows.map((workflow, idx) => (
-          <div key={idx} className="bg-white rounded-lg border border-[#e5e5e5] p-6">
+          <div key={idx} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold">{workflow.title}</h3>
-              <span className="px-3 py-1 bg-[#9FEF00]/10 text-[#5a7a00] text-xs font-medium rounded-full">
+              <span className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 text-xs font-medium rounded-full">
                 {workflow.time}
               </span>
             </div>
@@ -58,10 +58,10 @@ export default function WorkflowsSection() {
             <ol className="space-y-3">
               {workflow.steps.map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#9FEF00] text-[#111] flex items-center justify-center text-sm font-bold flex-shrink-0">
+                  <span className="w-6 h-6 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 text-slate-100 flex items-center justify-center text-sm font-bold flex-shrink-0">
                     {i + 1}
                   </span>
-                  <span className="text-sm text-[#666] pt-0.5">{step}</span>
+                  <span className="text-sm text-slate-400 pt-0.5">{step}</span>
                 </li>
               ))}
             </ol>

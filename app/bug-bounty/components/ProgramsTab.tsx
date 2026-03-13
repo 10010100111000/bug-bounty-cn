@@ -6,7 +6,7 @@ export default function ProgramsTab() {
       {/* 4类赏金计划详解 */}
       <div>
         <h2 className="text-2xl md:text-3xl font-bold mb-6">漏洞赏金计划的四大类型</h2>
-        <p className="text-[#666] mb-6 max-w-3xl">
+        <p className="text-slate-400 mb-6 max-w-3xl">
           了解不同类型的计划，选择最适合你的水平和目标的类型，新手建议从VDP开始积累经验
         </p>
 
@@ -90,20 +90,20 @@ export default function ProgramsTab() {
               color: "border-orange-200"
             }
           ].map((item, index) => (
-            <div key={index} className={`rounded-lg border ${item.color} bg-white overflow-hidden`}>
-              <div className="bg-[#fafafa] px-6 py-4 border-b border-[#e5e5e5]">
+            <div key={index} className={`rounded-lg border ${item.color} bg-slate-900/40 backdrop-blur-md overflow-hidden`}>
+              <div className="bg-slate-900/20 px-6 py-4 border-b border-slate-700/50">
                 <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                <p className="text-sm text-[#666]">{item.subtitle}</p>
+                <p className="text-sm text-slate-400">{item.subtitle}</p>
               </div>
               <div className="p-6">
-                <p className="text-[#666] mb-4">{item.desc}</p>
+                <p className="text-slate-400 mb-4">{item.desc}</p>
 
                 <div className="mb-3">
                   <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                     优势
                   </h4>
-                  <ul className="space-y-1 pl-6 text-sm text-[#666] list-disc">
+                  <ul className="space-y-1 pl-6 text-sm text-slate-400 list-disc">
                     {item.pros.map((pro, i) => (
                       <li key={i}>{pro}</li>
                     ))}
@@ -115,14 +115,14 @@ export default function ProgramsTab() {
                     <AlertTriangle className="w-4 h-4 text-orange-500" />
                     挑战
                   </h4>
-                  <ul className="space-y-1 pl-6 text-sm text-[#666] list-disc">
+                  <ul className="space-y-1 pl-6 text-sm text-slate-400 list-disc">
                     {item.cons.map((con, i) => (
                       <li key={i}>{con}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-[#e5e5e5]">
+                <div className="mt-4 pt-4 border-t border-slate-700/50">
                   <p className="text-sm font-medium">最适合：{item.bestFor}</p>
                 </div>
               </div>
@@ -132,15 +132,15 @@ export default function ProgramsTab() {
       </div>
 
       {/* VDP vs BBP 完整对比表 */}
-      <div className="rounded-lg border border-[#e5e5e5] bg-white overflow-hidden">
-        <div className="bg-[#fafafa] px-6 py-4 border-b border-[#e5e5e5]">
+      <div className="glass-panel overflow-hidden">
+        <div className="bg-slate-900/20 px-6 py-4 border-b border-slate-700/50">
           <h3 className="text-xl font-bold">VDP 与 BBP 详细对比</h3>
-          <p className="text-sm text-[#666] mt-1">新手最关心的两类计划，帮你清晰理解两者的核心差异，选择适合自己的起点</p>
+          <p className="text-sm text-slate-400 mt-1">新手最关心的两类计划，帮你清晰理解两者的核心差异，选择适合自己的起点</p>
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full bg-white">
+          <table className="w-full bg-slate-900/40 backdrop-blur-md">
             <thead>
-              <tr className="bg-[#fafafa] border-b border-[#e5e5e5]">
+              <tr className="bg-slate-900/20 border-b border-slate-700/50">
                 <th className="text-left py-4 px-6 font-semibold w-1/6">对比维度</th>
                 <th className="text-left py-4 px-6 font-semibold w-5/12">VDP（漏洞披露计划）</th>
                 <th className="text-left py-4 px-6 font-semibold w-5/12">BBP（漏洞赏金计划）</th>
@@ -189,10 +189,10 @@ export default function ProgramsTab() {
                   bbp: "现金收入+实战经验+行业声誉+职业机会"
                 }
               ].map((row, index) => (
-                <tr key={index} className="hover:bg-[#fafafa]">
+                <tr key={index} className="hover:bg-slate-900/20">
                   <td className="py-4 px-6 font-medium">{row.item}</td>
-                  <td className="py-4 px-6 text-sm text-[#666]">{row.vdp}</td>
-                  <td className="py-4 px-6 text-sm text-[#666]">{row.bbp}</td>
+                  <td className="py-4 px-6 text-sm text-slate-400">{row.vdp}</td>
+                  <td className="py-4 px-6 text-sm text-slate-400">{row.bbp}</td>
                 </tr>
               ))}
             </tbody>

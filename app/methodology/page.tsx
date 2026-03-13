@@ -18,7 +18,7 @@ import TopVulnerabilities from './components/TopVulnerabilities';
 
 export default function MethodologyPage() {
   return (
-    <div className="bg-[#fafafa] min-h-screen pb-20">
+    <div className="bg-slate-900/20 min-h-screen pb-20">
       <MethodologyHeader />
       
       <div className="max-w-6xl mx-auto px-4 py-8">

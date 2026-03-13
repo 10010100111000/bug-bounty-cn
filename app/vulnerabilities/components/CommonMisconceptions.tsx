@@ -40,14 +40,14 @@ export default function CommonMisconceptions() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">对漏洞的常见错误认知</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           很多新手在理解安全漏洞时，都会陷入这些常见的误区。让我们来纠正这些错误认知。
         </p>
       </div>
 
       <div className="space-y-4">
         {misconceptions.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             {/* 错误认知 */}
             <div className="mb-4 flex items-start gap-3">
               <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 font-bold flex items-center justify-center">
@@ -61,12 +61,12 @@ export default function CommonMisconceptions() {
 
             {/* 正确认知 */}
             <div className="ml-11 flex items-start gap-3">
-              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9FEF00]/20 text-[#5a7a00] font-bold flex items-center justify-center">
+              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#9FEF00]/20 text-cyan-300 font-bold flex items-center justify-center">
                 ✓
               </span>
               <div>
-                <h4 className="text-sm font-semibold text-[#5a7a00] mb-1">事实真相</h4>
-                <p className="text-[#666]">{item.right}</p>
+                <h4 className="text-sm font-semibold text-cyan-300 mb-1">事实真相</h4>
+                <p className="text-slate-400">{item.right}</p>
               </div>
             </div>
           </div>

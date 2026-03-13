@@ -74,7 +74,7 @@ export default function AttackChains() {
     <section>
       <div className="text-center mb-8">
         <h3 className="text-xl md:text-2xl font-bold mb-2">漏洞攻击链详解</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           在真实场景中，最危险的攻击往往是由多个简单漏洞串联而成的完整利用链。理解如何关联漏洞，是高级研究者的核心能力。
         </p>
       </div>
@@ -87,7 +87,7 @@ export default function AttackChains() {
             : "bg-orange-100 text-orange-700";
 
           return (
-            <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+            <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
               <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h4 className="text-xl font-bold">{chain.title}</h4>
                 <span className={`px-3 py-1 rounded-full text-sm font-bold ${severityColor}`}>
@@ -99,17 +99,17 @@ export default function AttackChains() {
               <div className="space-y-3 mb-4">
                 {chain.steps.map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#9FEF00]/20 text-[#5a7a00] text-xs font-bold flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#9FEF00]/20 text-cyan-300 text-xs font-bold flex items-center justify-center mt-0.5">
                       {i + 1}
                     </div>
-                    <p className="text-[#666]">{step}</p>
+                    <p className="text-slate-400">{step}</p>
                   </div>
                 ))}
               </div>
 
               {/* 经验教训 */}
-              <div className="bg-[#9FEF00]/5 rounded-lg p-4 border border-[#9FEF00]/20">
-                <h5 className="text-sm font-semibold text-[#5a7a00] mb-1">经验教训</h5>
+              <div className="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/30">
+                <h5 className="text-sm font-semibold text-cyan-300 mb-1">经验教训</h5>
                 <p className="text-[#333]">{chain.lesson}</p>
               </div>
             </div>

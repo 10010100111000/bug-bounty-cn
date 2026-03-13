@@ -168,42 +168,42 @@ export default function RealScenarios() {
     <section>
       <div className="text-center mb-10">
         <h3 className="text-xl md:text-2xl font-bold mb-2">真实场景实战案例</h3>
-        <p className="text-[#666] max-w-2xl mx-auto">
+        <p className="text-slate-400 max-w-2xl mx-auto">
           展示如何在不同类型的目标上应用方法论的真实场景，包含预期结果和赏金。
         </p>
       </div>
 
       <div className="space-y-8">
         {scenarios.map((scenario, index) => (
-          <div key={index} className="bg-white rounded-lg border border-[#e5e5e5] p-6 hover:shadow-sm transition-all">
+          <div key={index} className="bg-slate-900/40 backdrop-blur-md rounded-lg border border-slate-700/50 p-6 hover:shadow-sm transition-all">
             {/* 场景头部 */}
             <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
               <div>
                 <h4 className="text-xl font-bold mb-1">{scenario.title}</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-[#9FEF00]/10 text-[#5a7a00] rounded text-xs font-medium">
+                  <span className="px-2 py-1 bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(34,211,238,0.15)] text-cyan-300 rounded text-xs font-medium">
                     {scenario.duration}
                   </span>
-                  <span className="px-2 py-1 bg-[#f5f5f5] rounded text-xs">
+                  <span className="px-2 py-1 bg-slate-800/60 rounded text-xs">
                     {scenario.tech}
                   </span>
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-sm text-[#666]">总赏金</span>
-                <p className="text-2xl font-bold text-[#9FEF00]">{scenario.reward}</p>
+                <span className="text-sm text-slate-400">总赏金</span>
+                <p className="text-2xl font-bold text-cyan-400">{scenario.reward}</p>
               </div>
             </div>
 
             {/* 每日进度 */}
             <div className="space-y-4 mb-6">
               {scenario.days.map((day, dIndex) => (
-                <div key={dIndex} className="p-4 rounded-lg bg-[#fafafa] border border-[#e5e5e5]">
+                <div key={dIndex} className="p-4 rounded-lg bg-slate-900/20 border border-slate-700/50">
                   <h5 className="font-bold mb-2">{day.day}</h5>
                   <ul className="space-y-1">
                     {day.items.map((item, iIndex) => (
-                      <li key={iIndex} className="text-sm text-[#666] flex items-start gap-2">
-                        <span className="text-[#9FEF00] mt-1 flex-shrink-0">•</span>
+                      <li key={iIndex} className="text-sm text-slate-400 flex items-start gap-2">
+                        <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
                         {item}
                       </li>
                     ))}
@@ -213,11 +213,11 @@ export default function RealScenarios() {
             </div>
 
             {/* 发现的漏洞 */}
-            <div className="bg-[#9FEF00]/5 rounded-lg p-4 border border-[#9FEF00]/20">
-              <h5 className="text-sm font-bold text-[#5a7a00] mb-2">发现的漏洞</h5>
+            <div className="bg-cyan-500/10 rounded-lg p-4 border border-cyan-500/30">
+              <h5 className="text-sm font-bold text-cyan-300 mb-2">发现的漏洞</h5>
               <div className="flex flex-wrap gap-2">
                 {scenario.vulnerabilities.map((vuln, vIndex) => (
-                  <span key={vIndex} className="px-2 py-1 bg-white rounded text-xs border border-[#9FEF00]/30">
+                  <span key={vIndex} className="px-2 py-1 bg-slate-900/40 backdrop-blur-md rounded text-xs border border-cyan-400/40">
                     {vuln}
                   </span>
                 ))}

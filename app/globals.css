@@ -23,62 +23,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* -------------------------- 2. 全局颜色强行覆盖 (Dark Mode Inversion) -------------------------- */
-/* 因为去除了对子页面源码的强制改写，这里在 CSS 层面劫持旧代码中常用的底色和文字色，强制翻转为暗色科技风 */
-
-/* 拦截原来的背景色 bg-white 和 bg-[#fafafa] */
-.bg-white, .bg-\[\#fafafa\], .bg-slate-50, .bg-gray-50, .bg-gray-100 {
-  background-color: transparent !important;
-}
-
-/* 拦截原来的文字颜色 text-[#666], text-[#111], text-gray-800 等 */
-.text-\[\#111\], .text-black, .text-gray-800, .text-gray-900 {
-  color: #f1f5f9 !important; /* slate-100 */
-}
-
-.text-\[\#666\], .text-gray-600, .text-gray-500 {
-  color: #cbd5e1 !important; /* slate-300 */
-}
-
-/* 拦截原来的高亮绿色 text-[#9FEF00], text-[#5a7a00] 改为极光蓝或星空紫 */
-.text-\[\#9FEF00\], .text-\[\#5a7a00\], .text-green-500 {
-  color: #22d3ee !important; /* cyan-400 */
-}
-
-/* 拦截原来的绿色背景块 bg-[#9FEF00]/10 等 */
-.bg-\[\#9FEF00\]\/10, .bg-\[\#9FEF00\]\/5 {
-  background-color: rgba(34, 211, 238, 0.1) !important; /* cyan-400 / 10% */
-  border-color: rgba(34, 211, 238, 0.3) !important;
-}
-
-.bg-\[\#9FEF00\] {
-  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%) !important;
-  color: white !important;
-  border: none !important;
-}
-
-/* 拦截原来的边框颜色 border-[#e5e5e5] 等 */
-.border-\[\#e5e5e5\], .border-gray-200, .border-\[\#9FEF00\]\/20 {
-  border-color: rgba(148, 163, 184, 0.2) !important; /* slate-400 / 20% */
-}
-
-/* 所有带边框的区块默认加上毛玻璃特效（适配 roadmap 等页面里的卡片） */
-.border-\[\#e5e5e5\] {
-  background: rgba(15, 23, 42, 0.4) !important; /* slate-900 / 40% */
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-radius: 1rem !important; /* 16px */
-  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.border-\[\#e5e5e5\]:hover {
-  background: rgba(15, 23, 42, 0.6) !important;
-  border-color: rgba(34, 211, 238, 0.4) !important; /* hover 极光蓝 */
-  transform: translateY(-2px) !important;
-}
-
-/* -------------------------- 3. 现代科技核心类 (极简 & 性能优先) -------------------------- */
+/* -------------------------- 2. 现代科技核心类 (极简 & 性能优先) -------------------------- */
 
 /* 全新毛玻璃卡片：更轻量、更高雅的科技感 */
 .glass-panel {
@@ -172,7 +117,7 @@ html, body {
 }
 
 
-/* -------------------------- 4. 漏洞级别标签 (重新设计色彩体系) -------------------------- */
+/* -------------------------- 3. 漏洞级别标签 (重新设计色彩体系) -------------------------- */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -214,7 +159,7 @@ html, body {
 }
 
 
-/* -------------------------- 5. 滚动条美化 (科技感细条) -------------------------- */
+/* -------------------------- 4. 滚动条美化 (科技感细条) -------------------------- */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -230,7 +175,7 @@ html, body {
   background: rgba(34, 211, 238, 0.8); /* cyan-400 */
 }
 
-/* -------------------------- 6. 动画类 -------------------------- */
+/* -------------------------- 5. 动画类 -------------------------- */
 @keyframes glow-pulse {
   0% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.2); }
   50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.6); }
