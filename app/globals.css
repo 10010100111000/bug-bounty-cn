@@ -8,166 +8,235 @@
 }
 
 html, body {
+  /* 移除移动端适配，强制指定桌面端最小宽度，避免小屏幕下错乱 */
+  min-width: 1280px;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  /* 安全主题深色渐变背景，纯CSS零开销 */
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #18181b 100%);
+
+  /* 现代科技感深色渐变背景：深渊蓝 到 星空紫 */
+  background: radial-gradient(circle at 15% 50%, rgba(30, 27, 75, 1) 0%, rgba(15, 23, 42, 1) 30%, rgba(2, 6, 23, 1) 100%);
   background-attachment: fixed;
-  color: #f1f5f9;
-  line-height: 1.6;
+  color: #f8fafc; /* slate-50，极高对比度提升阅读体验 */
+  line-height: 1.7; /* 增大行高提升阅读体验 */
+  letter-spacing: 0.025em; /* 微调字间距 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* -------------------------- 2. 核心毛玻璃通用类（直接给你的卡片/容器加这个class就行） -------------------------- */
-.glass-card {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
+/* -------------------------- 2. 全局颜色强行覆盖 (Dark Mode Inversion) -------------------------- */
+/* 因为去除了对子页面源码的强制改写，这里在 CSS 层面劫持旧代码中常用的底色和文字色，强制翻转为暗色科技风 */
+
+/* 拦截原来的背景色 bg-white 和 bg-[#fafafa] */
+.bg-white, .bg-\[\#fafafa\], .bg-slate-50, .bg-gray-50, .bg-gray-100 {
+  background-color: transparent !important;
 }
 
-/* 毛玻璃代码块样式 */
-.glass-code {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  color: #22c55e;
+/* 拦截原来的文字颜色 text-[#666], text-[#111], text-gray-800 等 */
+.text-\[\#111\], .text-black, .text-gray-800, .text-gray-900 {
+  color: #f1f5f9 !important; /* slate-100 */
 }
 
-/* 深色主题卡片内的子容器 */
-.dark-sub-card {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+.text-\[\#666\], .text-gray-600, .text-gray-500 {
+  color: #cbd5e1 !important; /* slate-300 */
 }
 
-/* -------------------------- 3. 首页/通用模块样式（适配你的截图） -------------------------- */
-/* 页面容器 */
-.page-container {
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* 拦截原来的高亮绿色 text-[#9FEF00], text-[#5a7a00] 改为极光蓝或星空紫 */
+.text-\[\#9FEF00\], .text-\[\#5a7a00\], .text-green-500 {
+  color: #22d3ee !important; /* cyan-400 */
 }
 
-/* 标题样式 */
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #f1f5f9, #a78bfa);
+/* 拦截原来的绿色背景块 bg-[#9FEF00]/10 等 */
+.bg-\[\#9FEF00\]\/10, .bg-\[\#9FEF00\]\/5 {
+  background-color: rgba(34, 211, 238, 0.1) !important; /* cyan-400 / 10% */
+  border-color: rgba(34, 211, 238, 0.3) !important;
+}
+
+.bg-\[\#9FEF00\] {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%) !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* 拦截原来的边框颜色 border-[#e5e5e5] 等 */
+.border-\[\#e5e5e5\], .border-gray-200, .border-\[\#9FEF00\]\/20 {
+  border-color: rgba(148, 163, 184, 0.2) !important; /* slate-400 / 20% */
+}
+
+/* 所有带边框的区块默认加上毛玻璃特效（适配 roadmap 等页面里的卡片） */
+.border-\[\#e5e5e5\] {
+  background: rgba(15, 23, 42, 0.4) !important; /* slate-900 / 40% */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 1rem !important; /* 16px */
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.border-\[\#e5e5e5\]:hover {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-color: rgba(34, 211, 238, 0.4) !important; /* hover 极光蓝 */
+  transform: translateY(-2px) !important;
+}
+
+/* -------------------------- 3. 现代科技核心类 (极简 & 性能优先) -------------------------- */
+
+/* 全新毛玻璃卡片：更轻量、更高雅的科技感 */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.4); /* slate-900 / 40% */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.1); /* slate-400 / 10% */
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border-radius: 1rem; /* 16px */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(167, 139, 250, 0.3); /* violet-400 (星空紫) 悬浮微光 */
+  box-shadow: 0 8px 32px -4px rgba(139, 92, 246, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.1); /* violet-500 发光 */
+  transform: translateY(-2px); /* 轻微上浮，纯CSS高性能动画 */
+}
+
+/* 终端/代码块样式：极光蓝配色 */
+.tech-code-block {
+  background: #020617; /* slate-950 */
+  border: 1px solid rgba(34, 211, 238, 0.2); /* cyan-400 (极光蓝) 边框 */
+  border-radius: 0.75rem;
+  color: #22d3ee; /* cyan-400 字体 */
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.tech-code-header {
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 渐变标题字体：星空紫 到 极光蓝 */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%); /* purple-500 to cyan-400 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent; /* Fallback */
 }
 
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 2rem 0 1rem;
-  color: #f1f5f9;
-}
-
-/* 工具/内容卡片 */
-.content-card {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* 链接样式 */
-.link-primary {
-  color: #a78bfa;
+/* 科技感主按钮：高对比度、悬浮发光 */
+.btn-tech-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%); /* violet-500 to cyan-500 */
+  color: #ffffff;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s;
-}
-.link-primary:hover {
-  color: #c4b5fd;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px; /* 全圆角 */
+  border: none;
+  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.39);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
 }
 
-/* FAQ模块样式 */
-.faq-item {
-  margin-bottom: 1.25rem;
+.btn-tech-primary:hover {
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+  transform: scale(1.02);
+  filter: brightness(1.1);
 }
-.faq-question {
-  font-size: 1.25rem;
+
+.btn-tech-secondary {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 211, 238, 0.3); /* cyan-400 */
+  color: #22d3ee;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-tech-secondary:hover {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: #22d3ee;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+
+/* -------------------------- 4. 漏洞级别标签 (重新设计色彩体系) -------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #e2e8f0;
-}
-.faq-answer {
-  color: #cbd5e1;
-  line-height: 1.8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* -------------------------- 4. 标签通用样式 -------------------------- */
-.tag {
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-.tag-critical {
-  background: rgba(239, 68, 68, 0.2);
-  color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.3);
-}
-.tag-high {
-  background: rgba(249, 115, 22, 0.2);
-  color: #fdba74;
-  border: 1px solid rgba(249, 115, 22, 0.3);
-}
-.tag-medium {
-  background: rgba(234, 179, 8, 0.2);
-  color: #fde047;
-  border: 1px solid rgba(234, 179, 8, 0.3);
-}
-.tag-low {
-  background: rgba(34, 197, 94, 0.2);
-  color: #86efac;
-  border: 1px solid rgba(34, 197, 94, 0.3);
+/* 严重风险: 赛博红 */
+.badge-critical {
+  background: rgba(225, 29, 72, 0.15); /* rose-600 */
+  color: #fb7185; /* rose-400 */
+  border: 1px solid rgba(225, 29, 72, 0.4);
+  box-shadow: 0 0 10px rgba(225, 29, 72, 0.2);
 }
 
-/* -------------------------- 5. 深色主题文字适配 -------------------------- */
-.text-muted {
-  color: #cbd5e1;
-}
-.text-light {
-  color: #f1f5f9;
+/* 高风险: 警告橙 */
+.badge-high {
+  background: rgba(234, 88, 12, 0.15); /* orange-600 */
+  color: #fb923c; /* orange-400 */
+  border: 1px solid rgba(234, 88, 12, 0.4);
 }
 
-/* -------------------------- 6. 滚动条美化，适配深色主题 -------------------------- */
+/* 中风险: 电力黄 */
+.badge-medium {
+  background: rgba(202, 138, 4, 0.15); /* yellow-600 */
+  color: #facc15; /* yellow-400 */
+  border: 1px solid rgba(202, 138, 4, 0.4);
+}
+
+/* 低风险/信息: 极光蓝 */
+.badge-low {
+  background: rgba(14, 165, 233, 0.15); /* sky-500 */
+  color: #38bdf8; /* sky-400 */
+  border: 1px solid rgba(14, 165, 233, 0.4);
+}
+
+
+/* -------------------------- 5. 滚动条美化 (科技感细条) -------------------------- */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.05);
+  background: #020617; /* slate-950 */
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.2);
-  border-radius: 4px;
+  background: rgba(139, 92, 246, 0.5); /* violet-500 */
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(34, 211, 238, 0.8); /* cyan-400 */
 }
 
-/* -------------------------- 7. 代码/等宽内容样式 -------------------------- */
-code, pre, .font-mono {
-  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+/* -------------------------- 6. 动画类 -------------------------- */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.2); }
 }
 
-/* -------------------------- 8. 响应式适配 -------------------------- */
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 1.75rem;
-  }
-  .section-title {
-    font-size: 1.35rem;
-  }
-  .page-container {
-    padding: 1.5rem 1rem;
-  }
+.animate-glow {
+  animation: glow-pulse 3s infinite;
 }
